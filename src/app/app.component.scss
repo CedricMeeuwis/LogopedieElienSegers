@@ -1,0 +1,22 @@
+@import '../styles.scss';
+
+.desktop-menu {
+  position: absolute;
+}
+
+.bg-menu
+{
+  background: #FFFCF8;
+  background: linear-gradient(180deg, rgba(255, 252, 248, 1) 50%, rgba(250, 219, 205, 1) 100%);
+}
+
+.menu{
+  border-bottom: $dark 2px solid;
+}
+
+.footer-top{
+  height: 8rem;
+  .footer-top-clip{
+    clip-path: ellipse(65% 45% at 50% 0%);
+  }
+}

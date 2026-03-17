@@ -1,0 +1,49 @@
+<div class="content d-flex flex-column m-auto gap-5 mb-5">
+  <div class="bg-info d-flex align-items-center home-intro">
+    <h2 class="text-dark ms-5">Logopedie Elien Segers</h2>
+  </div>
+  <div class="d-flex flex-row w-50 m-auto py-4">
+    <div>
+      <!--<h1 class="text-primary">Elien Segers</h1>-->
+      <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+    </div>
+    <div class="bg-secondary sig-font">Foto</div>
+  </div>
+  <div class="text-center bg-info py-4">
+    <h2>Aanbiedingen</h2>
+    <div class="row w-100 row-gap-4">
+      <div class="col col-4">
+        <span>foto</span>
+        <p class="text-primary fw-bold">Logopedie</p>
+        <p>Lorem ipsum dolor sit amet. Qui fuga velit eum vitae quia et nihil dicta ut voluptate iusto ut consequatur ratione a aperiam dolore.</p>
+        <a href="" class="btn btn-primary rounded-pill">Lees meer</a>
+      </div>
+      <div class="col col-4">
+        <span>foto</span>
+        <p class="text-secondary fw-bold">Coaching</p>
+        <p>Lorem ipsum dolor sit amet. Qui fuga velit eum vitae quia et nihil dicta ut voluptate iusto ut consequatur ratione a aperiam dolore.</p>
+        <a href="" class="btn btn-secondary rounded-pill">Lees meer</a>
+      </div>
+      <div class="col col-4">
+        <span>foto</span>
+        <p class="text-dark fw-bold">Therapie</p>
+        <p>Lorem ipsum dolor sit amet. Qui fuga velit eum vitae quia et nihil dicta ut voluptate iusto ut consequatur ratione a aperiam dolore.</p>
+        <a href="" class="btn btn-dark rounded-pill">Lees meer</a>
+      </div>
+      <div class="col col-4">
+        <span>foto</span>
+        <p class="text-secondary fw-bold">Extra</p>
+        <p>Lorem ipsum dolor sit amet. Qui fuga velit eum vitae quia et nihil dicta ut voluptate iusto ut consequatur ratione a aperiam dolore.</p>
+        <a href="" class="btn btn-secondary rounded-pill">Lees meer</a>
+      </div>
+    </div>
+  </div>
+  <div class="w-100 py-3 px-5">
+    <h2 class="mb-5">Bekwaamheden</h2>
+    <div class="row row-gap-4">
+      <div *ngFor="let compentency of competences" class="col col-6">
+        <i class="bi bi-circle-fill text-primary me-3"></i><span>{{compentency}}</span>
+      </div>
+    </div>
+  </div>
+</div>

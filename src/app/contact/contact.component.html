@@ -1,0 +1,60 @@
+<div class="content mt-5">
+  <h1 class="text-center mb-5">Contact</h1>
+  <div class="row justify-content-evenly mx-5">
+    <div class="d-flex flex-column gap-3 col-12 col-md-6 mb-5">
+      <h5>Logopedie Elien Segers</h5>
+      <div>
+        <i class="bi bi-geo-alt-fill text-primary"></i><span class="ms-2">Bergen 38, 2370 Arendonk</span>
+      </div>
+      <div>
+        <i class="bi bi-phone-fill text-primary"></i><span class="ms-2">+32 44 552 63 90</span>
+      </div>
+      <div>
+        <i class="bi bi-envelope-fill text-primary"></i><a class="ms-2" href="mailto:logopedie-eliensegers@gmail.com">logopedie-eliensegers@gmail.com</a>
+      </div>
+      <hr/>
+      <h5>Behandelde stoornissen</h5>
+      <div *ngFor="let disorder of disorders; index as i">
+        <i class="bi bi-caret-right-fill" [ngClass]="i % 2 == 0 ? 'text-primary' : 'text-dark'"></i><span class="ms-2">{{disorder}}</span>
+      </div>
+    </div>
+    <form class="bg-info p-4 col-12 col-md-6 mb-5">
+      <div class="mb-3">
+        <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
+        <input type="text" class="form-control" id="firstname">
+      </div>
+      <div class="mb-3">
+        <label for="name" class="form-label">Naam</label><span class="text-danger"> *</span>
+        <input type="text" class="form-control" id="name">
+      </div>
+      <div class="mb-3">
+        <label for="street" class="form-label">Straat + nr</label><span class="text-danger"> *</span>
+        <input type="text" class="form-control" id="street">
+      </div>
+      <div class="mb-3">
+        <label for="postcode" class="form-label">Postcode + gemeente</label><span class="text-danger"> *</span>
+        <input type="text" class="form-control" id="postcode">
+      </div>
+      <div class="mb-3">
+        <label for="email" class="form-label">E-mail</label><span class="text-danger"> *</span>
+        <input type="email" class="form-control" id="email">
+      </div>
+      <div class="mb-3">
+        <label for="telephone" class="form-label">Tel. / GSM</label><span class="text-danger"> *</span>
+        <input type="text" class="form-control" id="telephone">
+      </div>
+      <div class="mb-3">
+        <label for="disorder" class="form-label">Ik wens meer te weten over:</label><span class="text-danger"> *</span>
+        <select class="form-select" id="disorder">
+          <option selected disabled>Kies een stoornis...</option>
+          <option *ngFor="let disorder of disorders" [value]="disorder">{{disorder}}</option>
+        </select>
+      </div>
+      <div class="mb-3">
+        <label for="extra" class="form-label">Vragen en/of opmerkingen</label><span class="text-danger"> *</span>
+        <textarea class="form-control" id="extra"></textarea>
+      </div>
+      <a class="btn btn-secondary">Verzenden</a>
+    </form>
+  </div>
+</div>

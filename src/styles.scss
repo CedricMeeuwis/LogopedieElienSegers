@@ -1,0 +1,52 @@
+$primary: #D17050;
+$secondary: #F5BA9D;
+$tertiary: #FADBCD;
+$dark: #BD9793;
+$light: #FFFCF8;
+$info: #FADBCD;
+
+$body-color: $dark;
+$body-bg: $light;
+$table-color: $dark;
+
+@font-face {
+  font-family: 'Noteworthy';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/noteworthy.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./assets/fonts/montserrat.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Autosig';
+  font-weight: normal;
+  font-style: italic;
+  src: url('./assets/fonts/auto.otf') format('opentype');
+}
+
+$headings-font-family: 'Noteworthy';
+$font-family-base: 'Montserrat';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
+
+.sig-font{
+  font-family: 'Autosig';
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}

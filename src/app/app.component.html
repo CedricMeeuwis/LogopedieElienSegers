@@ -1,0 +1,49 @@
+<main class="main">
+  <div class="sticky-top menu">
+    <div class="d-flex flex-row justify-content-between p-4 bg-menu">
+      <div class="d-flex flex-row gap-3">
+        <img src="assets/logo.png" height="100" width="100" class="img-fluid">
+        <div class="d-flex flex-column justify-content-evenly h3 h-100">
+          <logopedie-logo></logopedie-logo>
+          <span class="sig-font">Elien Segers</span>
+        </div>
+      </div>
+      <div class="d-flex align-items-center">
+        <a href="contact" class="btn btn-primary rounded-pill">Maak een afspraak</a>
+      </div>
+    </div>
+    <div class="d-flex flex-row justify-content-evenly alignt-items-center bg-info py-3">
+      <span class="unselectable" [ngClass]="isRouteActive('/') ? 'text-primary' : 'clickable'" (click)="goTo('/')">Home</span>
+      <span class="unselectable" [ngClass]="isRouteActive('/over-mij') ? 'text-primary' : 'clickable'" (click)="goTo('/over-mij')">Over mij</span>
+      <span class="unselectable" [ngClass]="isRouteActive('/aanbod') ? 'text-primary' : 'clickable'" (click)="goTo('/aanbod')">Aanbod</span>
+      <span class="unselectable" [ngClass]="isRouteActive('/contact') ? 'text-primary' : 'clickable'" (click)="goTo('/contact')">Contact</span>
+    </div>
+  </div>
+  <router-outlet/>
+  <div class="footer-top bg-info w-100">
+    <div class="footer-top-clip bg-light w-100 h-100"></div>
+  </div>
+  <footer class="bg-info d-flex justify-content-evenly pb-4">
+    <div class="border-start border-primary d-flex align-items-center h3">
+      <span class="ms-3 sig-font">Logopedie<br/>Segers</span>
+    </div>
+    <div class="d-flex flex-column gap-3">
+      <span class="fw-bold">Info</span>
+      <a href="/" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Home</a>
+      <a href="over-mij" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Over mij</a>
+      <a href="contact" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Contact</a>
+    </div>
+    <div class="d-flex flex-column gap-3">
+      <span class="fw-bold">Aanbod</span>
+      <a href="aanbod#behandelingen" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Behandelingen</a>
+      <a href="aanbod#tarieven" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Tarieven</a>
+      <a href="aanbod" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Z</a>
+    </div>
+    <div class="d-flex flex-column gap-3">
+      <span class="fw-bold">Contact</span>
+      <span>Bergen 38,<br/>2370 Arendonk</span>
+      <a href="mailto:logopedie-eliensegers@gmail.com" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">logopedie-eliensegers@gmail.com</a>
+      <span>+32 44 552 63 90</span>
+    </div>
+  </footer>
+</main>
