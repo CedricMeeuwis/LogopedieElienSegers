@@ -7,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './offer.component.scss',
 })
 export class OfferComponent {
-
+  text_col_val: string = "col-7";
+  img_col_val: string = "col-5";
 }
