@@ -18,41 +18,41 @@
         <i class="bi bi-caret-right-fill" [ngClass]="i % 2 == 0 ? 'text-primary' : 'text-dark'"></i><span class="ms-2">{{disorder}}</span>
       </div>
     </div>
-    <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" class="bg-info p-4 col-12 col-md-6 mb-5 order-1 order-md-2">
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="bg-info p-4 col-12 col-md-6 mb-5 order-1 order-md-2">
       <div class="mb-3">
         <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="firstname" ngModel required #firstname="ngModel">
+        <input type="text" class="form-control" [ngClass]="'border-danger border-2' : contactForm.get('firstname').hasError()" id="firstname" formControlName="firstname">
       </div>
       <div class="mb-3">
         <label for="name" class="form-label">Naam</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="name" ngModel required #name="ngModel">
+        <input type="text" class="form-control" id="name" formControlName="name">
       </div>
       <div class="mb-3">
         <label for="street" class="form-label">Straat + nr</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="street" ngModel required #street="ngModel">
+        <input type="text" class="form-control" id="street" formControlName="street">
       </div>
       <div class="mb-3">
         <label for="postcode" class="form-label">Postcode + gemeente</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="postcode" ngModel required #postcode="ngModel">
+        <input type="text" class="form-control" id="postcode" formControlName="postcode">
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">E-mail</label><span class="text-danger"> *</span>
-        <input type="email" class="form-control" id="email" ngModel required #email="ngModel">
+        <input type="email" class="form-control" id="email" formControlName="email">
       </div>
       <div class="mb-3">
         <label for="telephone" class="form-label">Tel. / GSM</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="telephone" ngModel required #telephone="ngModel">
+        <input type="text" class="form-control" id="telephone" formControlName="telephone">
       </div>
       <div class="mb-3">
         <label for="disorder" class="form-label">Ik wens meer te weten over:</label><span class="text-danger"> *</span>
-        <select class="form-select" id="disorder" ngModel required #disorder="ngModel">
+        <select class="form-select" id="disorder" formControlName="disorder">
           <option selected disabled>Kies een stoornis...</option>
           <option *ngFor="let disorder of disorders" [value]="disorder">{{disorder}}</option>
         </select>
       </div>
       <div class="mb-3">
         <label for="extra" class="form-label">Vragen en/of opmerkingen</label><span class="text-danger"> *</span>
-        <textarea class="form-control" id="extra" ngModel required #extra="ngModel"></textarea>
+        <textarea class="form-control" id="extra" formControlName="extra"></textarea>
       </div>
       <input type="submit" class="btn btn-secondary" value="Verzenden">
     </form>
