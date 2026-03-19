@@ -14,9 +14,5 @@ export class HomeComponent {
     "Quis autem vel eum iure reprehenderit qui",
     "At vero eos et accusamus et iusto odio dignissimos ducimus",
     "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo"
-  ]
-  constructor()
-  {
-    console.log(this.competences);
-  }
+  ];
 }

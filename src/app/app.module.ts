@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormControl, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { LogopedieLogoComponent } from './components/logopedie-logo/logopedie-logo.component';
 import { OfferComponent } from './offer/offer.component';
+import { FooterComponent } from './footer/footer.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -17,10 +20,15 @@ import { OfferComponent } from './offer/offer.component';
     AboutComponent,
     LogopedieLogoComponent,
     OfferComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    CommonModule,
+    AppRoutingModule,
+    FormControl,
+    ReactiveFormsModule,
+    NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]

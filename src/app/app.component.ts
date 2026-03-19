@@ -11,12 +11,18 @@ export class AppComponent {
   title = 'Segers Logopedie';
 
   constructor(private route: Router) {
-    console.log(route.url);
   }
 
   isRouteActive(routeText: string)
   {
-    return this.route.url === routeText;
+    const routeSplit = this.route.url.split('#');
+    let isActive = false;
+    routeSplit.forEach(x => {
+      if(x === routeText){
+        isActive = true;
+      }
+    })
+    return isActive;
   }
   goTo(link:string)
   {

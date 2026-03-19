@@ -14,17 +14,17 @@ const routes: Routes = [
   {
     path: 'over-mij',
     component: AboutComponent,
-    title: 'Over mij'
+    title: 'Logopedie Segers ● Over mij'
   },
   {
     path: 'aanbod',
     component: OfferComponent,
-    title: 'Aanbod'
+    title: 'Logopedie Segers ● Aanbod'
   },
   {
     path: 'contact',
     component: ContactComponent,
-    title: 'Contact'
+    title: 'Logopedie Segers ● Contact'
   }
 ];
 

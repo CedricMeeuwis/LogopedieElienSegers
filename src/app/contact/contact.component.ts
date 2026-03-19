@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'contact',
@@ -19,4 +20,15 @@ export class ContactComponent {
     "Impact training",
     "Andere"
   ];
+
+  onSubmit(contactForm: NgForm)
+  {
+    if(contactForm.valid)
+    {
+      console.log(contactForm);
+    }
+    else{
+      console.log("Not valid");
+    }
+  }
 }
