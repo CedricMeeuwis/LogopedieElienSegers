@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 
@@ -33,14 +33,35 @@ export class ContactComponent {
     extra: new FormControl('', Validators.required),
   });
 
+  private http = inject(HttpClient);
+
   onSubmit()
   {
     this.contactForm.markAllAsTouched();
     if(this.contactForm.valid)
     {
+      /*this.http.post('https://formspree.io/f/xpqybwna',
+        {
+          email: 'cedric.meeuwis@hotmail.com',
+          title: 'Indiening ' + this.contactForm.get('firstname') + ' ' + this.contactForm.get('name'),
+          message: ''
+
+        }).subscribe(
+          response =>
+          {
+            console.log(response);
+          }
+        );*/
+        console.log("Sent form");
     }
     else{
       console.log("Invalid form");
     }
+  }
+
+  fieldIsError(fieldName: string)
+  {
+    let field = this.contactForm.get('fieldName')
+    return field?.touched && field.hasError('required');
   }
 }

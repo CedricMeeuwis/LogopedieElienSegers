@@ -21,7 +21,7 @@
     <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="bg-info p-4 col-12 col-md-6 mb-5 order-1 order-md-2">
       <div class="mb-3">
         <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" [ngClass]="'border-danger border-2' : contactForm.get('firstname').hasError()" id="firstname" formControlName="firstname">
+        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : false }" id="firstname" formControlName="firstname">
       </div>
       <div class="mb-3">
         <label for="name" class="form-label">Naam</label><span class="text-danger"> *</span>
