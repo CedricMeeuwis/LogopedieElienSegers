@@ -7,7 +7,7 @@
 .bg-menu
 {
   background: #FFFCF8;
-  background: linear-gradient(180deg, rgba(255, 252, 248, 1) 50%, rgba(250, 219, 205, 1) 100%);
+  background: linear-gradient(180deg, $light 50%, $info 100%);
 }
 
 .menu{

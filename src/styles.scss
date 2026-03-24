@@ -1,8 +1,8 @@
 $primary: #D17050;
 $secondary: #F5BA9D;
-$tertiary: #FADBCD;
+$warning: #cce4e6;
 $dark: #BD9793;
-$light: #FFFCF8;
+$light: #fff6eb;//#FFFCF8;
 $info: #FADBCD;
 
 $body-color: $dark;
@@ -24,7 +24,7 @@ $table-color: $dark;
 @font-face {
   font-family: 'Autosig';
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   src: url('./assets/fonts/auto.otf') format('opentype');
 }
 
@@ -36,6 +36,10 @@ $font-family-base: 'Montserrat';
 
 .sig-font{
   font-family: 'Autosig';
+}
+
+.text-shadow{
+  text-shadow: 1px 1px 1px #555555;
 }
 
 .clickable:hover {

@@ -3,29 +3,33 @@
   </div>
   <footer class="bg-info pb-4">
     <!--Mobile-->
-    <div class="d-md-none px-4 pb-4">
-      <div class="border-start border-primary d-flex align-items-center h3 mb-4">
-      <span class="ms-3 sig-font">Logopedie<br/>Segers</span>
+    <div class="d-lg-none px-4 pb-4">
+      <div class="border-start border-primary d-flex align-items-center h3 mb-5">
+        <span class="ms-3 sig-font">Logopedie<br/>Segers</span>
+      </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex flex-column gap-3" [innerHtml]="infoBlock"></div>
+      <hr>
+      <div class="d-flex flex-column gap-3" [innerHtml]="offerBlock"></div>
+      <hr>
+      <div class="d-flex flex-column gap-3" [innerHtml]="contactBlock"></div>
     </div>
-    <div class="row w-100">
-      <div class="d-flex flex-column gap-3 col-6 col-sm-4 mb-4" [innerHtml]="infoBlock">
-      </div>
-      <div class="d-flex flex-column gap-3 col-6 col-sm-4" [innerHtml]="offerBlock">
-      </div>
-      <div class="d-flex flex-column gap-3 col-12 col-sm-4" [innerHtml]="contactBlock">
-      </div>
+      <!--<div class="row w-100">
+        <div class="d-flex flex-column gap-3 col-6 col-md-4 mb-4" [innerHtml]="infoBlock">
+        </div>
+        <div class="d-flex flex-column gap-3 col-6 col-md-4" [innerHtml]="offerBlock">
+        </div>
+        <div class="d-flex flex-column gap-3 col-12 col-md-4" [innerHtml]="contactBlock">
+        </div>
+      </div>-->
     </div>
     <!--Desktop-->
-    </div>
-    <div class="d-none d-md-flex justify-content-evenly">
+    <div class="d-none d-lg-flex justify-content-evenly w-100">
       <div class="border-start border-primary d-flex align-items-center h3">
         <span class="ms-3 sig-font">Logopedie<br/>Segers</span>
       </div>
-      <div class="d-flex flex-column gap-3" [innerHtml]="infoBlock">
-      </div>
-      <div class="d-flex flex-column gap-3" [innerHtml]="offerBlock">
-      </div>
-      <div class="d-flex flex-column gap-3" [innerHtml]="contactBlock">
-      </div>
+      <div class="d-flex flex-column gap-3" [innerHtml]="infoBlock"></div>
+      <div class="d-flex flex-column gap-3" [innerHtml]="offerBlock"></div>
+      <div class="d-flex flex-column gap-3" [innerHtml]="contactBlock"></div>
     </div>
   </footer>

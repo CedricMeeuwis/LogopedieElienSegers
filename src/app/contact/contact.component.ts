@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'contact',
@@ -9,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   styleUrl: './contact.component.scss',
 })
 export class ContactComponent {
-  disorders: string[] = [
+  treatments: string[] = [
     "Stotteren",
     "Lees- en/of spellingsproblemen",
     "Rekenproblemen",
@@ -29,7 +30,7 @@ export class ContactComponent {
     postcode: new FormControl('', Validators.required),
     email: new FormControl('', Validators.required),
     telephone: new FormControl('', Validators.required),
-    disorder: new FormControl('', Validators.required),
+    treatment: new FormControl('', Validators.required),
     extra: new FormControl('', Validators.required),
   });
 
@@ -40,19 +41,26 @@ export class ContactComponent {
     this.contactForm.markAllAsTouched();
     if(this.contactForm.valid)
     {
-      /*this.http.post('https://formspree.io/f/xpqybwna',
+      let current = Date.now();
+      let datePipe = new DatePipe('en-BE');
+      this.http.post('https://formspree.io/f/xpqybwna',
         {
-          email: 'cedric.meeuwis@hotmail.com',
-          title: 'Indiening ' + this.contactForm.get('firstname') + ' ' + this.contactForm.get('name'),
-          message: ''
-
+          title: 'Indiening ' + this.contactForm.get('firstname')?.value + ' ' + this.contactForm.get('name')?.value + ' - ' + datePipe.transform(current, 'd/MM/y H:mm'),
+          message:
+          'Voornaam: ' + this.contactForm.get('firstname')?.value + '\n' +
+          'Naam: ' + this.contactForm.get('name')?.value + '\n' +
+          'Straat: ' + this.contactForm.get('street')?.value + '\n' +
+          'Postcode: ' + this.contactForm.get('postcode')?.value + '\n' +
+          'Email: ' + this.contactForm.get('email')?.value + '\n' +
+          'Telefoon: ' + this.contactForm.get('telephone')?.value + '\n' +
+          'Behandeling: ' + this.contactForm.get('treatment')?.value + '\n' +
+          'Vraag/opmerking: ' + this.contactForm.get('extra')?.value
         }).subscribe(
           response =>
           {
             console.log(response);
           }
-        );*/
-        console.log("Sent form");
+        );
     }
     else{
       console.log("Invalid form");
@@ -61,7 +69,7 @@ export class ContactComponent {
 
   fieldIsError(fieldName: string)
   {
-    let field = this.contactForm.get('fieldName')
+    let field = this.contactForm.get(fieldName);
     return field?.touched && field.hasError('required');
   }
 }

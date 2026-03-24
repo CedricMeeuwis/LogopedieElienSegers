@@ -1,17 +1,20 @@
 <main class="main">
   <div class="sticky-top menu">
-    <div class="d-flex flex-row p-4 bg-menu">
-      <div class="d-flex flex-row flex-fill gap-3">
+    <div class="d-flex flex-row align-items-center p-4 bg-menu gap-xl-4 gap-xxl-5">
+      <div class="d-flex flex-row gap-3">
         <img src="assets/images/Logo-04.svg" width="128" class="img-fluid">
-        <div class="d-flex flex-fill flex-column justify-content-evenly h3 h-100">
+        <div class="d-flex flex-fill flex-column justify-content-evenly h3">
           <logopedie-logo></logopedie-logo>
           <span class="sig-font">Elien Segers</span>
         </div>
       </div>
-      <div class="d-none d-md-flex align-items-center">
+      <a class="d-none d-xl-block fs-5 link-underline link-underline-opacity-0 text-dark" href="mailto:logopedie.eliensegers@gmail.com">logopedie.eliensegers@gmail.com</a>
+      <a class="d-none d-xl-block fs-5 link-underline link-underline-opacity-0 text-dark" href="tel:+32445526390">044 552 63 90</a>
+      <a class="d-none d-xl-block fs-5 text-dark" href="https://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
+      <div class="d-none d-md-flex align-items-center justify-content-end flex-fill">
         <a href="contact" class="btn btn-primary rounded-pill">Maak een afspraak</a>
       </div>
-      <div class="d-flex d-md-none align-items-center">
+      <div class="d-flex d-md-none align-items-center justify-content-end flex-fill">
         <i class="bi bi-list display-1" data-bs-toggle="offcanvas" href="#navbar" role="button" aria-expanded="false" aria-controls="navbar"></i>
       </div>
     </div>
@@ -19,6 +22,7 @@
       <span class="unselectable" [ngClass]="isRouteActive('/') ? 'text-primary' : 'clickable'" (click)="goTo('/')">Home</span>
       <span class="unselectable" [ngClass]="isRouteActive('/over-mij') ? 'text-primary' : 'clickable'" (click)="goTo('/over-mij')">Over mij</span>
       <span class="unselectable" [ngClass]="isRouteActive('/aanbod') ? 'text-primary' : 'clickable'" (click)="goTo('/aanbod')">Aanbod</span>
+      <span class="unselectable" [ngClass]="isRouteActive('/practisch') ? 'text-primary' : 'clickable'" (click)="goTo('/practisch')">Practisch</span>
       <span class="unselectable" [ngClass]="isRouteActive('/contact') ? 'text-primary' : 'clickable'" (click)="goTo('/contact')">Contact</span>
     </div>
   </div>
@@ -33,7 +37,8 @@
       <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/')"><i class="bi bi-house-fill"></i> Home</span>
       <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/over-mij')"><i class="bi bi-person-fill"></i> Over mij</span>
       <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/aanbod')"><i class="bi bi-file-earmark-text-fill"></i> Aanbod</span>
-      <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/contact')"><i class="bi bi-telephone-fill"></i> Contact</span>
+      <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/practisch')"><i class="bi bi-calendar-week-fill"></i> Practisch</span>
+      <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/contact')"><i class="bi bi-telephone-fill"></i> Contact</span>
     </div>
   </div>
 </main>

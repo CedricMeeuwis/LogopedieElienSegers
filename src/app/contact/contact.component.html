@@ -1,60 +1,84 @@
 <div class="content mt-5">
   <h1 class="text-center mb-5">Contact</h1>
   <div class="row justify-content-evenly mx-5">
-    <div class="d-flex flex-column gap-3 col-12 col-md-6 mb-5 order-2 order-md-1">
+    <div class="d-none d-md-flex flex-column gap-3 col-12 col-md-6 mb-5">
       <h5>Logopedie Elien Segers</h5>
       <div>
-        <i class="bi bi-geo-alt-fill text-primary"></i><span class="ms-2">Bergen 38, 2370 Arendonk</span>
+        <i class="bi bi-geo-alt-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="https://maps.google.com/?q=Bergen+38" target="_blank">Bergen 38, 2370 Arendonk</a>
       </div>
       <div>
-        <i class="bi bi-phone-fill text-primary"></i><span class="ms-2">+32 44 552 63 90</span>
+        <i class="bi bi-phone-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="tel:+32445526390">+32 44 552 63 90</a>
       </div>
       <div>
-        <i class="bi bi-envelope-fill text-primary"></i><a class="ms-2" href="mailto:logopedie-eliensegers@gmail.com">logopedie-eliensegers@gmail.com</a>
+        <i class="bi bi-envelope-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="mailto:logopedie.eliensegers@gmail.com">logopedie.eliensegers@gmail.com</a>
       </div>
       <hr/>
-      <h5>Behandelde stoornissen</h5>
-      <div *ngFor="let disorder of disorders; index as i">
-        <i class="bi bi-caret-right-fill" [ngClass]="i % 2 == 0 ? 'text-primary' : 'text-dark'"></i><span class="ms-2">{{disorder}}</span>
+      <h5>Behandelingen</h5>
+      <div *ngFor="let treatment of treatments; index as i">
+        <i class="bi bi-caret-right-fill" [ngClass]="i % 2 == 0 ? 'text-primary' : 'text-dark'"></i><span class="ms-2">{{treatment}}</span>
       </div>
     </div>
-    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="bg-info p-4 col-12 col-md-6 mb-5 order-1 order-md-2">
+    <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" class="bg-info p-4 col-12 col-md-6 mb-5">
       <div class="mb-3">
         <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : false }" id="firstname" formControlName="firstname">
+        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('firstname') }" id="firstname" formControlName="firstname">
       </div>
       <div class="mb-3">
         <label for="name" class="form-label">Naam</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="name" formControlName="name">
+        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('name') }" id="name" formControlName="name">
       </div>
       <div class="mb-3">
         <label for="street" class="form-label">Straat + nr</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="street" formControlName="street">
+        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('street') }" id="street" formControlName="street">
       </div>
       <div class="mb-3">
         <label for="postcode" class="form-label">Postcode + gemeente</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="postcode" formControlName="postcode">
+        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('postcode') }" id="postcode" formControlName="postcode">
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">E-mail</label><span class="text-danger"> *</span>
-        <input type="email" class="form-control" id="email" formControlName="email">
+        <input type="email" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('email') }" id="email" formControlName="email">
       </div>
       <div class="mb-3">
         <label for="telephone" class="form-label">Tel. / GSM</label><span class="text-danger"> *</span>
-        <input type="text" class="form-control" id="telephone" formControlName="telephone">
+        <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('telephone') }" id="telephone" formControlName="telephone">
       </div>
       <div class="mb-3">
-        <label for="disorder" class="form-label">Ik wens meer te weten over:</label><span class="text-danger"> *</span>
-        <select class="form-select" id="disorder" formControlName="disorder">
+        <label for="treatment" class="form-label">Ik wens meer te weten over:</label><span class="text-danger"> *</span>
+        <select class="form-select" [ngClass]="{ 'border-danger border-2' : fieldIsError('treatment') }" id="treatment" formControlName="treatment">
           <option selected disabled>Kies een stoornis...</option>
-          <option *ngFor="let disorder of disorders" [value]="disorder">{{disorder}}</option>
+          <option *ngFor="let treatment of treatments" [value]="treatment">{{treatment}}</option>
         </select>
       </div>
       <div class="mb-3">
         <label for="extra" class="form-label">Vragen en/of opmerkingen</label><span class="text-danger"> *</span>
-        <textarea class="form-control" id="extra" formControlName="extra"></textarea>
+        <textarea class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('extra') }" id="extra" formControlName="extra"></textarea>
       </div>
       <input type="submit" class="btn btn-secondary" value="Verzenden">
     </form>
+    <p class="d-block d-md-none text-center fs-2 mb-4">
+      Contacteer me
+    </p>
+    <div class="d-flex justify-content-around d-md-none">
+      <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="https://maps.google.com/?q=Bergen+38">
+        <i class="bi bi-geo-alt-fill text-primary display-2"></i>
+      </a>
+      <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="tel:+32445526390">
+        <i class="bi bi-phone-fill text-primary display-2"></i>
+      </a>
+      <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="mailto:logopedie.eliensegers@gmail.com">
+        <i class="bi bi-envelope-fill text-primary display-2"></i>
+      </a>
+    </div>
+    <p class="d-block d-md-none text-center fs-2 my-5">
+      Behandelingen
+    </p>
+    <div class="d-block d-md-none">
+      <div class="row">
+        <div *ngFor="let treatment of treatments; index as i" class="col-12 col-sm-6 gy-3">
+          <i class="bi bi-circle-fill"></i><span class="fs-5 ps-2">{{treatment}}</span>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

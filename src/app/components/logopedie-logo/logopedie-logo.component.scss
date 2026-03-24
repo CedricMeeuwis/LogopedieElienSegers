@@ -1,4 +1,10 @@
+@import '../../../styles.scss';
+
 .logopedie-logo-text
 {
   font-family: 'Noteworthy';
+}
+
+.text-info-dr{
+  color: darken($info, 3%);
 }
