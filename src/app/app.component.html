@@ -1,6 +1,6 @@
 <main class="main">
   <div class="sticky-top menu">
-    <div class="d-flex flex-row align-items-center p-4 bg-menu gap-xl-4 gap-xxl-5">
+    <div class="d-flex flex-row align-items-center bg-menu p-4 gap-xl-4 gap-xxl-5">
       <div class="d-flex flex-row gap-3">
         <img src="assets/images/Logo-04.svg" width="128" class="img-fluid">
         <div class="d-flex flex-fill flex-column justify-content-evenly h3">
@@ -21,7 +21,7 @@
     <div class="d-none d-md-flex flex-row justify-content-evenly alignt-items-center bg-info py-3">
       <span class="unselectable" [ngClass]="isRouteActive('/') ? 'text-primary' : 'clickable'" (click)="goTo('/')">Home</span>
       <span class="unselectable" [ngClass]="isRouteActive('/over-mij') ? 'text-primary' : 'clickable'" (click)="goTo('/over-mij')">Over mij</span>
-      <span class="unselectable" [ngClass]="isRouteActive('/aanbod') ? 'text-primary' : 'clickable'" (click)="goTo('/aanbod')">Aanbod</span>
+      <span class="unselectable" [ngClass]="isRouteActive('/behandelingen') ? 'text-primary' : 'clickable'" (click)="goTo('/behandelingen')">Behandelingen</span>
       <span class="unselectable" [ngClass]="isRouteActive('/practisch') ? 'text-primary' : 'clickable'" (click)="goTo('/practisch')">Practisch</span>
       <span class="unselectable" [ngClass]="isRouteActive('/contact') ? 'text-primary' : 'clickable'" (click)="goTo('/contact')">Contact</span>
     </div>
@@ -36,7 +36,7 @@
     <div class="offcanvas-body d-flex flex-column p-0 fs-3">
       <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/')"><i class="bi bi-house-fill"></i> Home</span>
       <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/over-mij')"><i class="bi bi-person-fill"></i> Over mij</span>
-      <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/aanbod')"><i class="bi bi-file-earmark-text-fill"></i> Aanbod</span>
+      <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/behandelingen')"><i class="bi bi-file-earmark-text-fill"></i> Behandelingen</span>
       <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/practisch')"><i class="bi bi-calendar-week-fill"></i> Practisch</span>
       <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/contact')"><i class="bi bi-telephone-fill"></i> Contact</span>
     </div>

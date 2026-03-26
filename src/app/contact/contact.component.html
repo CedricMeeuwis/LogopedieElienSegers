@@ -22,26 +22,32 @@
       <div class="mb-3">
         <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
         <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('firstname') }" id="firstname" formControlName="firstname">
+        <label for="firstname" class="form-label text-danger" *ngIf="fieldIsError('firstname')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="name" class="form-label">Naam</label><span class="text-danger"> *</span>
         <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('name') }" id="name" formControlName="name">
+        <label for="name" class="form-label text-danger" *ngIf="fieldIsError('name')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="street" class="form-label">Straat + nr</label><span class="text-danger"> *</span>
         <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('street') }" id="street" formControlName="street">
+        <label for="street" class="form-label text-danger" *ngIf="fieldIsError('street')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="postcode" class="form-label">Postcode + gemeente</label><span class="text-danger"> *</span>
         <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('postcode') }" id="postcode" formControlName="postcode">
+        <label for="postcode" class="form-label text-danger" *ngIf="fieldIsError('postcode')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="email" class="form-label">E-mail</label><span class="text-danger"> *</span>
         <input type="email" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('email') }" id="email" formControlName="email">
+        <label for="email" class="form-label text-danger" *ngIf="fieldIsError('email')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="telephone" class="form-label">Tel. / GSM</label><span class="text-danger"> *</span>
         <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('telephone') }" id="telephone" formControlName="telephone">
+        <label for="telephone" class="form-label text-danger" *ngIf="fieldIsError('telephone')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="treatment" class="form-label">Ik wens meer te weten over:</label><span class="text-danger"> *</span>
@@ -49,10 +55,12 @@
           <option selected disabled>Kies een stoornis...</option>
           <option *ngFor="let treatment of treatments" [value]="treatment">{{treatment}}</option>
         </select>
+        <label for="treatment" class="form-label text-danger" *ngIf="fieldIsError('treatment')">Dit veld is verplicht</label>
       </div>
       <div class="mb-3">
         <label for="extra" class="form-label">Vragen en/of opmerkingen</label><span class="text-danger"> *</span>
-        <textarea class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('extra') }" id="extra" formControlName="extra"></textarea>
+        <textarea class="form-control" [ngClass]="{ 'border-danger border-2' : fieldIsError('extra') }" id="extra" formControlName="extra" rows="4"></textarea>
+        <label for="extra" class="form-label text-danger" *ngIf="fieldIsError('extra')">Dit veld is verplicht</label>
       </div>
       <input type="submit" class="btn btn-secondary" value="Verzenden">
     </form>

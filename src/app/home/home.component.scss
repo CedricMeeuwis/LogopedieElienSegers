@@ -1,4 +1,18 @@
 .home-intro{
   clip-path: ellipse(100% 100% at 5% 0%);
   height: 16rem;
+  background-image: url('../../assets/images/IMG_1560_1080.jpg');
+  background-position: top;
+  background-size: cover;
+  opacity: 80%;
+  @media (min-width: 768px) {
+    height: 22rem;
+  }
+}
+
+.w-xl-60
+{
+  @media (min-width: 1200px) {
+    width: 60%;
+  }
 }

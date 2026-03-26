@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { OfferComponent } from './offer/offer.component';
+import { PracticalComponent } from './practical/practical.component';
 
 const routes: Routes = [
   {
@@ -17,14 +18,19 @@ const routes: Routes = [
     title: 'Logopedie Segers ● Over mij'
   },
   {
-    path: 'aanbod',
+    path: 'behandelingen',
     component: OfferComponent,
-    title: 'Logopedie Segers ● Aanbod'
+    title: 'Logopedie Segers ● Behandelingen'
   },
   {
     path: 'contact',
     component: ContactComponent,
     title: 'Logopedie Segers ● Contact'
+  },
+  {
+    path: 'practisch',
+    component: PracticalComponent,
+    title: 'Logopedie Segers ● Practisch'
   }
 ];
 

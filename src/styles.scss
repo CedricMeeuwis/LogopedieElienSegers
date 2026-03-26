@@ -1,14 +1,3 @@
-$primary: #D17050;
-$secondary: #F5BA9D;
-$warning: #cce4e6;
-$dark: #BD9793;
-$light: #fff6eb;//#FFFCF8;
-$info: #FADBCD;
-
-$body-color: $dark;
-$body-bg: $light;
-$table-color: $dark;
-
 @font-face {
   font-family: 'Noteworthy';
   font-weight: normal;
@@ -28,8 +17,7 @@ $table-color: $dark;
   src: url('./assets/fonts/auto.otf') format('opentype');
 }
 
-$headings-font-family: 'Noteworthy';
-$font-family-base: 'Montserrat';
+@import "_variables.scss";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
@@ -44,6 +32,10 @@ $font-family-base: 'Montserrat';
 
 .clickable:hover {
   cursor: pointer;
+}
+
+.text-justify{
+  text-align: justify;
 }
 
 .unselectable {

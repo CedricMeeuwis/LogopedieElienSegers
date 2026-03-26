@@ -10,6 +10,8 @@ import { AboutComponent } from './about/about.component';
 import { LogopedieLogoComponent } from './components/logopedie-logo/logopedie-logo.component';
 import { OfferComponent } from './offer/offer.component';
 import { FooterComponent } from './footer/footer.component';
+import { BrandImageComponent } from './components/brand-image/brand-image.component';
+import { PracticalComponent } from './practical/practical.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { FooterComponent } from './footer/footer.component';
     LogopedieLogoComponent,
     OfferComponent,
     FooterComponent,
+    BrandImageComponent,
+    PracticalComponent,
   ],
   imports: [
     BrowserModule,
