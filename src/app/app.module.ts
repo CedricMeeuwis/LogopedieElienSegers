@@ -12,6 +12,7 @@ import { OfferComponent } from './offer/offer.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrandImageComponent } from './components/brand-image/brand-image.component';
 import { PracticalComponent } from './practical/practical.component';
+import { TreatmentInfoComponent } from './treatment-info/treatment-info.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { PracticalComponent } from './practical/practical.component';
     FooterComponent,
     BrandImageComponent,
     PracticalComponent,
+    TreatmentInfoComponent,
   ],
   imports: [
     BrowserModule,

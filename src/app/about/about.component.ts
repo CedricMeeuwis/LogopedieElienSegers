@@ -9,31 +9,32 @@ import { Component } from '@angular/core';
 export class AboutComponent {
   offers: string[] = [
     "Stotteren",
-    "Ouderbegeleiding voor ouders van stotterende kinderen",
-    "Articulatieproblemen",
-    "Taalproblemen",
-    "Afwijkende mondgewoonten (OMFT)",
-    "Lees- en spellingsproblemen",
-    "Rekenproblemen",
+    "Ouderbegeleiding bij (jonge) kinderen die stotteren",
+    "Taal- en spraakproblemen",
+    "Ouderbegeleiding bij (jonge) kinderen met taal- en spraakproblemen",
     "Preverbale logopedie",
-    "Het ImPACT programma, trainen van sociaalcommunicatieve vaardigheden bij kinderen met het autismespectrumstoornis"
+    "Afwijkende mondgewoonten (OMFT)",
+    "Lees- en spellingproblemen",
+    "Rekenproblemen",
+    "Het ImPACT programma, trainen van sociaalcommunicatieve vaardigheden bij kinderen met het autismespectrumstoornis",
+    "JASPER-methodiek, een spelgebaseerde interventie voor kinderen met ASS gericht op sociale interactie, emotieregulatie, betrokkenheid en communicatie"
   ];
 
   degrees: string[] = [
     "Bachelor lager onderwijs, Thomas More Turnhout (2013)",
     "Bachelor in de logopedie, Thomas More Antwerpen (2023)",
     "De cyclische aanpak van Hodson & Paden: onderzoek en behandeling van onverstaanbare kinderen, Thomas More Antwerpen (2023)",
-    "Praktische cursus technisch lezen, KWeC (2023)",
-    "Praktische cursus spelling, KWeC (2023)",
+    "Praktische cursus technisch lezen & spelling, KWeC (2023)",
     "De spraakbooster: op weg naar meer succes in je spraaktherapie, Sterk Academy (2023)",
     "Logopedie en tandheelkunde: oromyofunctionele therapie, Peter Helderop, Hasselt (2023)",
-    "RekenTrapperS in 1e, 2e en 3e leerjaar, Eureka Leuven (2024)",
-    "RekenTrapperS in 4e, 5e en 6e leerjaar, Eureka Leuven (2024)",
+    "RekenTrapperS in 1e tot en met 6e leerjaar, Eureka Leuven (2024)",
     "Dyscalculie in het secundair onderwijs, Eureka Leuven (2024)",
     "Executieve vaardigheden begrijpen en aanpakken, Vicki Tops 2the. (2024)",
     "Basiscursus PROMPT, Sig (2024)",
-    "Specialisatieopleiding stottertherapie, (CIOOS, 2024)",
+    "Specialisatieopleiding stottertherapie, Universiteit Antwerpen (CIOOS, 2024)",
     "Project ImPACT - Trainen van sociaal-communicatieve vaardigheden bij kinderen met een autismespectrumstoornis, Sig (2024)",
     "Intensieve vorming eet- en drinkproblemen bij baby’s en jonge kinderen, Artevelde Hogeschool Gent (januari 2025)",
+    "JASPER training - spelgebaseerde interventiemethode voor communicatietraining bij kinderen met een autismespectrumstoornis, Sig (2025)",
+    "OMFT-traject, Let's Speak Academy (2026)"
   ];
 }

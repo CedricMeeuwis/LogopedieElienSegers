@@ -11,7 +11,7 @@ export class FooterComponent {
         <a href="/" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Home</a>
         <a href="over-mij" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Over mij</a>
         <a href="contact" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Contact</a>
-        <a href="practisch" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Practisch</a>`;
+        <a href="praktisch" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Praktisch</a>`;
   offerBlock = `<span class="fw-bold">Behandelingen</span>
         <a href="behandelingen" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Stotteren</a>
         <a href="behandelingen" class="link-underline link-underline-opacity-0 link-underline-opacity-100-hover link-dark link-primary-hover">Preverbale logopedie</a>

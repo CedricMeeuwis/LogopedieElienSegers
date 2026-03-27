@@ -10,9 +10,12 @@
   }
 }
 
-.w-xl-60
+.welcome-intro
 {
   @media (min-width: 1200px) {
-    width: 60%;
+    width: 75%;
+  }
+  @media (min-width: 1400px) {
+    width: 75%;
   }
 }

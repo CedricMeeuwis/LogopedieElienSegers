@@ -26,16 +26,24 @@
   font-family: 'Autosig';
 }
 
+.note-font{
+  font-family: 'Noteworthy';
+}
+
 .text-shadow{
   text-shadow: 1px 1px 1px #555555;
 }
 
-.clickable:hover {
-  cursor: pointer;
-}
-
 .text-justify{
   text-align: justify;
+}
+
+.text-warning{
+  color: darken($warning, 20%) !important;
+}
+
+.clickable:hover {
+  cursor: pointer;
 }
 
 .unselectable {

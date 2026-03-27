@@ -5,6 +5,13 @@ type Step = {
   text: string
 }
 
+type Treatment = {
+  title: string,
+  color: string,
+  img: string
+}
+
+
 @Component({
   selector: 'home',
   templateUrl: './home.component.html',
@@ -34,4 +41,37 @@ export class HomeComponent {
       text: "Zodra alles administratief in orde is voor de terugbetaling, gaan we samen aan de slag met de therapie!"
     }
   ];
+
+  treatments: Treatment[] = [
+    {
+      title: 'Stotteren',
+      color: 'primary',
+      img: 'assets/images/IMG_1576_1080.jpg'
+    },
+    {
+      title: 'Preverbale logopedie',
+      color: 'dark',
+      img: 'assets/images/IMG_1617_1080.jpg'
+    },
+    {
+      title: 'Spraakontwikkeling en afwijkende mondgewoonten',
+      color: 'warning',
+      img: 'assets/images/IMG_1436_1080.jpg'
+    },
+    {
+      title: 'Taalontwikkeling en taalstoornis',
+      color: 'dark',
+      img: 'assets/images/IMG_1600_1080.jpg'
+    },
+    {
+      title: 'Leerstoornissen en leerproblemen',
+      color: 'primary',
+      img: 'assets/images/IMG_1448_1080.jpg'
+    },
+    {
+      title: 'IMPACT-training',
+      color: 'warning',
+      img: 'assets/images/IMG_1470_1080.jpg'
+    },
+  ]
 }

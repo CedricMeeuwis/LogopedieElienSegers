@@ -1,13 +1,13 @@
 <div class="content mx-auto py-5" id="behandelingen">
   <div class="d-flex flex-column align-items-center gap-5">
-    <div class="d-flex align-items-center w-75" *ngFor="let offer of offers; even as e" [ngClass]="{'flex-row-reverse' : e}">
-      <div class="col-5">
+    <div class="row align-items-center w-75" *ngFor="let offer of offers; even as e; index as i">
+      <div class="col-12 col-md-6 col-lg-5" [ngClass]="{'order-md-1' : e}">
         <brand-image [imgSrc]="offer.img" [color]="offer.color"></brand-image>
       </div>
-      <div class="col-7">
+      <div class="col-12 col-md-6 col-lg-7">
         <p class="fw-bold">{{offer.title}}</p>
         <p>{{offer.text}}</p>
-        <a href="/" class="btn" [ngClass]="'btn-' + offer.color">Meer info</a>
+        <a [href]="'behandelingen/info/' + (i+1)" class="btn" [ngClass]="'btn-' + offer.color">Meer info</a>
       </div>
     </div>
   </div>

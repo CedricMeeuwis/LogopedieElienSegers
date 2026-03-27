@@ -36,10 +36,12 @@ export class ContactComponent {
     name: new FormControl('', Validators.required),
     street: new FormControl('', Validators.required),
     postcode: new FormControl('', Validators.required),
-    email: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
     telephone: new FormControl('', Validators.required),
     treatment: new FormControl('', Validators.required),
     extra: new FormControl('', Validators.required),
+  }, {
+    updateOn: 'blur'
   });
 
   onSubmit()
@@ -80,9 +82,15 @@ export class ContactComponent {
     }
   }
 
-  fieldIsError(fieldName: string)
+  fieldHasError(fieldName: string)
   {
     let field = this.contactForm.get(fieldName);
-    return field?.touched && field.hasError('required');
+    return field?.dirty && !field.valid;
+  }
+
+  fieldHasSpecificError(fieldName: string, errorName: string)
+  {
+    let field = this.contactForm.get(fieldName);
+    return field?.dirty && field.hasError(errorName);
   }
 }
