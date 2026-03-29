@@ -15,6 +15,13 @@ interface formPayload {
   date: string | undefined | null
 }
 
+enum FormState {
+  init,
+  success,
+  firstError,
+  secondError
+}
+
 @Component({
   selector: 'contact',
   standalone: false,
@@ -44,13 +51,17 @@ export class ContactComponent {
     updateOn: 'blur'
   });
 
+  formState = FormState;
+  myFormState: FormState = FormState.init;
+
   onSubmit()
   {
     this.contactForm.markAllAsTouched();
-    if(this.contactForm.valid)
+    this.myFormState = FormState.success;
+    /*if(this.contactForm.valid)
     {
       let datePipe = new DatePipe('en-BE');
-      let dateStamp = datePipe.transform(Date.now(), 'd/MM/y H:mm');
+      let dateStamp = datePipe.transform(Date.now(), 'd-MM-y H:mm');
 
       let payload: formPayload = {
           firstname: this.contactForm.get('firstname')?.value,
@@ -70,16 +81,21 @@ export class ContactComponent {
         () => {
           emailjs.send('service_3g7jblh', 'template_vdbr26d', {...payload}, {
             publicKey: 'yi1Zymy11bXHkJm8Y'
+          }).then(
+            () => {
+              this.formState = FormState.success;
+            },
+          (err2) => {
+            console.log((err2 as EmailJSResponseStatus).text);
+            this.formState = FormState.secondError;
           });
         },
         (error) => {
           console.log((error as EmailJSResponseStatus).text);
+          this.formState = FormState.firstError;
         }
       );
-    }
-    else{
-      console.log("Invalid form");
-    }
+    }*/
   }
 
   fieldHasError(fieldName: string)

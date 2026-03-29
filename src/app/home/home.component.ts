@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 type Step = {
   title: string,
@@ -73,5 +74,11 @@ export class HomeComponent {
       color: 'warning',
       img: 'assets/images/IMG_1470_1080.jpg'
     },
-  ]
+  ];
+
+  constructor(private route: Router){}
+
+  navigateTo(path:string){
+    this.route.navigate([path]);
+  }
 }

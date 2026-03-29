@@ -7,7 +7,7 @@
       <h1 class="text-primary">Logopedie Elien Segers</h1>
       <p>Ik ben logopediste, gespecialiseerd in <span class="text-secondary">stotteren</span>, <span class="text-secondary">preverbale logopedie</span> en <span class="text-secondary">taal- en spraakontwikkeling</span>. Vanuit een wetenschappelijk onderbouwde en doelgerichte aanpak begeleid ik kinderen, jongeren en hun omgeving, met oog voor hun talenten. Mijn bijzondere expertise ligt in het gedragsmatige aspect van stotteren en de invloed van ontwikkelingsstoornissen op sociale interactie, communicatie en de verdere taalontwikkeling.</p>
       <p>Samen creëren we een veilige omgeving waarin communicatie kan groeien.</p>
-      <a href="practisch" class="btn btn-primary">Lees meer</a>
+      <a href="over-mij" class="btn btn-primary">Lees meer</a>
     </div>
     <div class="col-12 col-md-6 col-lg-5 order-1 order-md-2">
       <brand-image imgSrc="assets/images/IMG_1569_1080.jpg" color="primary"></brand-image>
@@ -16,7 +16,7 @@
   <div class="text-center bg-info p-4">
     <h1 class="mb-5">Behandelingen</h1>
     <div class="row w-100 gy-4 my-5">
-      <div class="col-12 col-sm-6 col-md-4" *ngFor="let treatment of treatments">
+      <div class="col-12 col-sm-6 col-md-4 clickable" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + (i + 1))">
         <h2 [ngClass]="'text-' + treatment.color">{{treatment.title}}</h2>
         <div class="p-4">
           <brand-image [imgSrc]="treatment.img" [color]="treatment.color"></brand-image>
