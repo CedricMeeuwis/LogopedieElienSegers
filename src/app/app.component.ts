@@ -10,8 +10,7 @@ import { Router } from '@angular/router';
 export class AppComponent {
   title = 'Segers Logopedie';
 
-  constructor(private route: Router) {
-  }
+  constructor(private route: Router){}
 
   isRouteActive(routeText: string)
   {

@@ -5,8 +5,8 @@
     background-color: $secondary;
     width: 12rem;
     height: 12rem;
-    border-color: $primary;
-    border-style: outset;
+    border-color: $primary darken($primary, 15) darken($primary, 15) $primary;
+    border-style: solid;
     border-width: 0.5rem;
     border-radius: 50%;
   }

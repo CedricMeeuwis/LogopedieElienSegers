@@ -18,6 +18,9 @@
 }
 
 $enable-negative-margins: true;
+html {
+  scroll-behavior: auto !important;
+}
 
 @import "_variables.scss";
 

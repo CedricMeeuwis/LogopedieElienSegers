@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import emailjs, {type EmailJSResponseStatus } from '@emailjs/browser';
@@ -17,6 +17,7 @@ interface formPayload {
 
 enum FormState {
   init,
+  loading,
   success,
   firstError,
   secondError
@@ -54,10 +55,23 @@ export class ContactComponent {
   formState = FormState;
   myFormState: FormState = FormState.init;
 
+  changeRef = inject(ChangeDetectorRef);
+
   onSubmit()
   {
     this.contactForm.markAllAsTouched();
-    this.myFormState = FormState.success;
+    this.myFormState = FormState.loading;
+
+    setTimeout(() => {
+      this.myFormState = FormState.success;
+      this.changeRef.detectChanges();
+      window.scrollTo({
+        left: 0,
+        top: 0,
+        behavior: 'instant'
+      });
+    }, 2000);
+
     /*if(this.contactForm.valid)
     {
       let datePipe = new DatePipe('en-BE');
@@ -75,6 +89,8 @@ export class ContactComponent {
           date: dateStamp
       }
 
+      this.myFormState = FormState.loading;
+
       emailjs.send('service_3g7jblh', 'template_hf39w7n', {...payload}, {
         publicKey: 'yi1Zymy11bXHkJm8Y'
       }).then(
@@ -83,18 +99,24 @@ export class ContactComponent {
             publicKey: 'yi1Zymy11bXHkJm8Y'
           }).then(
             () => {
-              this.formState = FormState.success;
+              this.myFormState = FormState.success;
             },
           (err2) => {
             console.log((err2 as EmailJSResponseStatus).text);
-            this.formState = FormState.secondError;
+            this.myFormState = FormState.secondError;
           });
         },
         (error) => {
           console.log((error as EmailJSResponseStatus).text);
-          this.formState = FormState.firstError;
+          this.myFormState = FormState.firstError;
         }
-      );
+      ).finally(() => {
+        window.scrollTo({
+          left: 0,
+          top: 0,
+          behavior: 'instant'
+        });
+      });
     }*/
   }
 
