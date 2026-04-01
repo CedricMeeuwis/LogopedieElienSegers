@@ -17,6 +17,8 @@
   src: url('./assets/fonts/auto.otf') format('opentype');
 }
 
+$enable-negative-margins: true;
+
 @import "_variables.scss";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -40,6 +42,10 @@
 
 .text-warning{
   color: darken($warning, 20%) !important;
+}
+
+.reverse {
+  transform: scaleX(-1);
 }
 
 .clickable:hover {

@@ -1,26 +1,63 @@
 <div class="content p-5">
-  <h1 class="my-5" id="tarieven">Tarieven</h1>
-  <div class="d-flex justify-content-center">
-    <table class="table text-primary">
-      <thead>
-        <tr class="table-primary">
-          <th colspan="2" class="text-dark">Onderzoekfase</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Intakegesprek</td>
-          <td>€60 (+/- 45min)</td>
-        </tr>
-        <tr>
-          <td>Onderzoek</td>
-          <td>€45 per begonnen half uur</td>
-        </tr>
-        <tr>
-          <td>Bespreken resultaten en behandelplan</td>
-          <td>€60 (+/- 45min)</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="width-fluid mx-auto">
+    <h1 class="mb-5 text-center">Stappenplan</h1>
+    <div class="d-flex flex-column gap-5">
+      <div class="text-center" *ngFor="let step of steps; index as i; last as l; even as e">
+        <div class="d-flex mb-5" [ngClass]="{'flex-row-reverse' : !e}">
+          <div class="step-ball" [ngClass]="{'step-ball-left': e}">
+            <div class="d-flex align-items-center justify-content-center p-3">
+              <h4 class="text-light">Stap {{i+1}}<br/>{{step.title}}</h4>
+            </div>
+          </div>
+          <span class="d-flex align-items-center text-start bg-info px-3" [ngClass]="e ? 'rounded-end-4' : 'rounded-start-4'">{{step.text}}</span>
+        </div>
+        <i class="bi bi-caret-down-fill text-primary fs-1" *ngIf="!l"></i>
+      </div>
+    </div>
+  </div>
+  <h1 class="my-5 w-75 mx-auto">Tarieven</h1>
+  <table class="table text-primary w-75 mx-auto">
+    <thead>
+      <tr class="table-primary">
+        <th colspan="2" class="text-dark">Onderzoekfase</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Intakegesprek</td>
+        <td>€60 (+/- 45min)</td>
+      </tr>
+      <tr>
+        <td>Onderzoek</td>
+        <td>€45 per begonnen half uur</td>
+      </tr>
+      <tr>
+        <td>Bespreken resultaten en behandelplan</td>
+        <td>€60 (+/- 45min)</td>
+      </tr>
+    </tbody>
+  </table>
+  <h2 class="text-center my-5">Foto's</h2>
+  <div id="practicalCarousel" class="carousel practical-carousel slide mx-auto">
+    <div class="carousel-indicators">
+    <button type="button" data-bs-target="#practicalCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#practicalCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+  </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/images/IMG_1556_1080.jpg" class="d-block w-100">
+      </div>
+      <div class="carousel-item">
+        <img src="assets/images/IMG_1700_1080.jpg" class="d-block w-100">
+      </div>
+    </div>
+    <button class="carousel-control-prev bg-dark-subtle" type="button" data-bs-target="#practicalCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next bg-dark-subtle" type="button" data-bs-target="#practicalCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
   </div>
 </div>

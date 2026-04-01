@@ -1,22 +1,22 @@
-<div class="content d-flex flex-column m-auto gap-5 mb-5">
+<div class="content d-flex flex-column m-auto gap-5">
   <div class="home-intro align-items-center d-flex">
     <!--<h2 class="text-dark text-shadow ms-5">Logopedie Elien Segers</h2>-->
   </div>
   <div class="row mx-auto welcome-intro gy-5 px-5">
-    <div class="col-12 col-md-6 col-lg-7 order-2 order-md-1">
+    <div class="col-12 col-md-6 order-2 order-md-1">
       <h1 class="text-primary">Logopedie Elien Segers</h1>
       <p>Ik ben logopediste, gespecialiseerd in <span class="text-secondary">stotteren</span>, <span class="text-secondary">preverbale logopedie</span> en <span class="text-secondary">taal- en spraakontwikkeling</span>. Vanuit een wetenschappelijk onderbouwde en doelgerichte aanpak begeleid ik kinderen, jongeren en hun omgeving, met oog voor hun talenten. Mijn bijzondere expertise ligt in het gedragsmatige aspect van stotteren en de invloed van ontwikkelingsstoornissen op sociale interactie, communicatie en de verdere taalontwikkeling.</p>
       <p>Samen creëren we een veilige omgeving waarin communicatie kan groeien.</p>
       <a href="over-mij" class="btn btn-primary">Lees meer</a>
     </div>
-    <div class="col-12 col-md-6 col-lg-5 order-1 order-md-2">
+    <div class="col-12 col-md-6 order-1 order-md-2">
       <brand-image imgSrc="assets/images/IMG_1569_1080.jpg" color="primary"></brand-image>
     </div>
   </div>
   <div class="text-center bg-info p-4">
     <h1 class="mb-5">Behandelingen</h1>
     <div class="row w-100 gy-4 my-5">
-      <div class="col-12 col-sm-6 col-md-4 clickable" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + (i + 1))">
+      <div class="col-12 col-sm-6 col-md-4 clickable mt-auto" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + (i + 1))">
         <h2 [ngClass]="'text-' + treatment.color">{{treatment.title}}</h2>
         <div class="p-4">
           <brand-image [imgSrc]="treatment.img" [color]="treatment.color"></brand-image>
@@ -26,7 +26,7 @@
   </div>
   <div class="d-inline-flex flex-column align-items-center py-3 px-5 gap-4">
     <h2>Stappenplan</h2>
-    <p class="mb-4">We gaan stap voor stap werken aan uw ondersteuning!</p>
+    <p class="sig-font fs-3 mb-4">Stap voor stap</p>
     <div class="d-flex flex-column flex-lg-row justify-content-between">
       <div *ngFor="let step of steps; index as i; last as l" class="d-flex">
         <div class="d-inline-flex flex-column align-items-center">
@@ -40,4 +40,5 @@
     </div>
     <a href="praktisch" class="btn btn-primary mt-5">Lees meer</a>
   </div>
+  <img src="assets/images/poster2.png" class="img-fluid poster-fluid mx-auto opacity-75">
 </div>

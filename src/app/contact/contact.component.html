@@ -1,24 +1,33 @@
-<div class="content mt-5">
+<div class="content my-5">
   <h1 class="text-center mb-5">Contact</h1>
   <div class="row mx-5">
-    <div class="d-none d-md-flex flex-column gap-3 col-12 col-md-6 mb-5">
-      <h5>Logopedie Elien Segers</h5>
-      <div>
-        <i class="bi bi-geo-alt-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="https://maps.google.com/?q=Bergen+38" target="_blank">Bergen 38, 2370 Arendonk</a>
-      </div>
-      <div>
-        <i class="bi bi-phone-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="tel:+32445526390">+32 44 552 63 90</a>
-      </div>
-      <div>
-        <i class="bi bi-envelope-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="mailto:logopedie.eliensegers@gmail.com">logopedie.eliensegers@gmail.com</a>
+    <div class="d-none d-md-flex flex-column gap-3 col-md-6">
+      <div class="dotted-line-background d-flex flex-column gap-3">
+        <h5>Logopedie Elien Segers</h5>
+        <span>
+          <i class="bi bi-geo-alt-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="https://maps.google.com/?q=Bergen+38" target="_blank">Bergen 38, 2370 Arendonk</a>
+        </span>
+        <span>
+          <i class="bi bi-phone-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="tel:+32470710392">+32 470 71 03 92</a>
+        </span>
+        <span>
+          <i class="bi bi-envelope-fill text-primary"></i><a class="ms-2 link-underline link-underline-opacity-0 text-dark" href="mailto:logopedie.eliensegers@gmail.com">logopedie.eliensegers@gmail.com</a>
+        </span>
       </div>
       <hr/>
-      <h5>Behandelingen</h5>
-      <div *ngFor="let treatment of treatments; index as i">
-        <i class="bi bi-caret-right-fill" [ngClass]="i % 2 == 0 ? 'text-primary' : 'text-dark'"></i><span class="ms-2">{{treatment}}</span>
+      <div class="row h-100">
+        <div class="col-12 col-xl-6">
+          <h5>Behandelingen</h5>
+          <div *ngFor="let treatment of treatments; index as i">
+            <i class="bi bi-caret-right-fill" [ngClass]="i % 2 == 0 ? 'text-primary' : 'text-dark'"></i><span class="ms-2">{{treatment}}</span>
+          </div>
+        </div>
+        <div class="d-none d-xl-block col-6">
+          <img class="img-fluid rounded-5 border border-5 border-warning" src="assets/images/IMG_1565_1080.jpg">
+        </div>
       </div>
     </div>
-    <div class="bg-info p-4 col-12 col-md-6 mb-5" [ngSwitch]="myFormState">
+    <div class="bg-info p-4 col-12 col-md-6" [ngSwitch]="myFormState">
       <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" *ngSwitchCase="formState.init">
         <div class="mb-3">
           <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
@@ -79,29 +88,30 @@
         Uw gegevens zijn goed doorgestuurd, maar er was een fout met het verzenden van de bevestigingsmail. Check a.u.b. of uw e-mailadres correct is ingevuld.
       </p>
     </div>
-    <p class="d-block d-md-none text-center fs-2 mb-4">
+    <p class="d-block d-md-none text-center fs-2 mb-4 my-5">
       Contacteer me
     </p>
     <div class="d-flex justify-content-around d-md-none">
       <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="https://maps.google.com/?q=Bergen+38">
         <i class="bi bi-geo-alt-fill text-primary display-2"></i>
       </a>
-      <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="tel:+32445526390">
+      <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="tel:+32470710392">
         <i class="bi bi-phone-fill text-primary display-2"></i>
       </a>
       <a class="text-dark link-underline link-underline-opacity-0 d-flex flex-column text-center" href="mailto:logopedie.eliensegers@gmail.com">
         <i class="bi bi-envelope-fill text-primary display-2"></i>
       </a>
     </div>
-    <p class="d-block d-md-none text-center fs-2 my-5">
+    <p class="d-block d-md-none text-center fs-2 mb-3 mt-5">
       Behandelingen
     </p>
     <div class="d-block d-md-none">
       <div class="row">
-        <div *ngFor="let treatment of treatments; index as i" class="col-12 col-sm-6 gy-3">
+        <div *ngFor="let treatment of treatments; index as i" class="col-12 gy-3">
           <i class="bi bi-circle-fill"></i><span class="fs-5 ps-2">{{treatment}}</span>
         </div>
       </div>
     </div>
+
   </div>
 </div>

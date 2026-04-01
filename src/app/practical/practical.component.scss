@@ -1,0 +1,55 @@
+@import '../../variables';
+.step-ball{
+  position: relative;
+  div{
+    background-color: $secondary;
+    width: 12rem;
+    height: 12rem;
+    border-color: $primary;
+    border-style: outset;
+    border-width: 0.5rem;
+    border-radius: 50%;
+  }
+}
+.step-ball::before{
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -1;
+  width: 6rem;
+  height: 12rem;
+  background-color: $info;
+}
+
+.step-ball-left::before{
+  left: 6rem;
+}
+
+.width-fluid{
+  width: 100%;
+  @media (min-width: 768px) {
+    width: 75%;
+  }
+  @media (min-width: 1400px) {
+    width: 50%;
+  }
+}
+
+.practical-carousel{
+  width: 100%;
+  @media (min-width: 576px) {
+    width: 75%;
+  }
+  @media (min-width: 768px) {
+    width: 62.5%;
+  }
+  @media (min-width: 992px) {
+    width: 50%;
+  }
+  @media (min-width: 992px) {
+    width: 37.5%;
+  }
+  @media (min-width: 1400px) {
+    width: 25%;
+  }
+}

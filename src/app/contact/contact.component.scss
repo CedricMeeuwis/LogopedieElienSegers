@@ -1,0 +1,34 @@
+@import '../../variables';
+
+.dotted-line-background{
+  position: relative;
+  overflow: clip;
+}
+
+.dotted-line-background::before{
+  content: "";
+  width: 12rem;
+  height: 12rem;
+  position: absolute;
+  right: -6rem;
+  top: -6rem;
+  border-radius: 50%;
+  border-width: 0.5rem;
+  border-style: dashed;
+  z-index: -1;
+  border-color: $warning;
+}
+
+.dotted-line-background::after{
+  content: "";
+  width: 16rem;
+  height: 12rem;
+  position: absolute;
+  left: 50%;
+  bottom: -7rem;
+  border-radius: 50%;
+  border-width: 0.5rem;
+  border-style: dashed;
+  z-index: -1;
+  border-color: $warning;
+}
