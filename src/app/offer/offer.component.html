@@ -1,13 +1,31 @@
 <div class="content mx-auto py-5" id="behandelingen">
   <div class="d-flex flex-column align-items-center gap-5">
-    <div class="row align-items-center w-75" *ngFor="let offer of offers; even as e; index as i">
+    <div class="row align-items-center justify-content-center w-75" *ngFor="let offer of offers; even as e">
       <div class="col-12 col-md-6 col-lg-5" [ngClass]="{'order-md-1' : e}">
         <brand-image [imgSrc]="offer.img" [color]="offer.color"></brand-image>
       </div>
       <div class="col-12 col-md-6 col-lg-7">
         <h3 [ngClass]="'text-' + offer.color">{{offer.title}}</h3>
-        <p class="bg-primary-subtle p-3 rounded">{{offer.text}}</p>
-        <a [href]="'behandelingen/info/' + (i+1)" class="btn" [ngClass]="'btn-' + offer.color">Meer info</a>
+        <ul class="list-group list-group-flush my-3">
+          <li class="list-group-item px-0" *ngFor="let question of offer.questions">
+            <i class="bi bi-caret-right pe-2"></i>{{question}}
+          </li>
+        </ul>
+        <a [href]="'behandelingen/info/' + offer.link" class="btn" [ngClass]="'btn-' + offer.color">Meer info</a>
+      </div>
+    </div>
+    <h1 class="mt-5 sig-font">
+      Placeholder quote
+    </h1>
+    <div class="d-flex icons-width">
+      <div>
+        <img src="assets/images/icons/WEBSITE_prenten_spelende_kinderen.svg" class="img-fluid">
+      </div>
+      <div>
+        <img src="assets/images/icons/WEBSITE_prenten_dyslexie.svg" class="img-fluid">
+      </div>
+      <div>
+        <img src="assets/images/icons/WEBSITE_prenten_borstvoeding1.svg" class="img-fluid">
       </div>
     </div>
   </div>

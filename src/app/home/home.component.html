@@ -13,7 +13,7 @@
       <brand-image imgSrc="assets/images/IMG_1569_1080.jpg" color="primary"></brand-image>
     </div>
   </div>
-  <div class="text-center bg-info p-4">
+  <div class="text-center bg-info p-4 treatment-part">
     <h1 class="mb-5">Behandelingen</h1>
     <div class="row w-100 gy-4 my-5">
       <div class="col-12 col-sm-6 col-md-4 clickable mt-auto" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + (i + 1))">

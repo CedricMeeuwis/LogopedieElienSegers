@@ -34,4 +34,16 @@ export class PracticalComponent {
       text: "Zodra alles administratief in orde is voor de terugbetaling, gaan we samen aan de slag met de therapie!"
     }
   ];
+
+  practicalImages: string[] = [
+    'IMG_1556_1080.jpg',
+    'IMG_1700_1080.jpg',
+    'IMG_1694_1080.jpg',
+    'IMG_1725_1080.jpg',
+    'IMG_1712_1080.jpg',
+    'IMG_1730_1080.jpg',
+    'IMG_1718_1080.jpg',
+    'IMG_1732_1080.jpg',
+    'IMG_1723_1080.jpg',
+  ]
 }

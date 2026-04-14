@@ -1,11 +1,15 @@
 <div class="content p-5">
-  <div class="row">
-    <div class="col-6">
-      <h2>{{treatment.title}}</h2>
-      <div [innerHtml]="treatment.content"></div>
+  <h2 class="text-primary">{{treatmentInfo.title}}</h2>
+  <div class="row mt-4" *ngFor="let part of treatmentInfo.parts; even as e">
+    <div class="col-12 col-lg-6 col-xl-8 d-flex flex-column gap-2" [ngClass]="{'order-lg-2' : !e}" [innerHtml]="part.content">
+      <p>Stotteren is meer dan onvloeiend spreken. Het raakt aan emoties, gedachten en hoe iemand zichzelf ervaart in communicatie. Het kan een grote impact hebben op het dagelijks functioneren en vraagt een individuele en veelzijdige aanpak op maat.</p>
+      <p>Ik specialiseerde me voor stotteren aan de Universiteit Antwerpen en begeleid zowel kleuters, kinderen, jongeren als volwassenen.</p>
+      <h4 class="text-primary">Normale onvloeiendheden of stotteren?</h4>
+      <p>Binnen de onvloeiendheden onderscheiden we normale en niet-normale onvloeiendheden. Peuters en kleuters herhalen regelmatig woorden en delen van zinnen, pauzeren, verspreken zich, aarzelen, hebben woordvindingsproblemen of beslissen plots om de zin anders te formuleren of om een ander woord te kiezen. Deze normale onvloeiendheden geven de peuter of kleuter ruimte en tijd om een uiting te (her)formuleren en om de aandacht van de luisteraar vast te houden. Controleverlies is hier niet aan de orde.</p>
+      <p>Onder de niet-normale onvloeiendheden (stotteren) verstaan we woordherhalingen, klank- of syllabeherhalingen, verlengingen, blokkeringen en/of afgebroken woorden. Deze onvloeiendheden gaan gepaard met controleverlies, waardoor taal en spraak in continuïteit en snelheid worden onderbroken</p>
     </div>
-    <div class="col-6">
-      <brand-image [imgSrc]="treatment.image" color="primary"></brand-image>
+    <div class="col-10 col-lg-6 col-xl-4 py-3 mx-auto align-items-center d-flex">
+      <brand-image [imgSrc]="part.image" [color]="part.imageColor"></brand-image>
     </div>
   </div>
 </div>

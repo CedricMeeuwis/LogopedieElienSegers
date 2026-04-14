@@ -24,10 +24,111 @@
 }
 
 .content{
+  overflow-x: hidden;
   @media (min-width: 992px) {
     width: 75%;
   }
   @media (min-width: 1200px) {
+    width: 60%;
+  }
+}
+
+.flower-pot
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100rem;
+
+  div{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
+
+.flower{
+    content: "";
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 10rem;
+    height: 10rem;
+    display: block;
+    position: absolute;
+    z-index: -1;
+}
+
+.flower-1{
+  background-image: url('../../assets/images/icons/WEBSITE_prenten_bloem1.svg');
+  right: -2rem;
+  top: 12rem;
+  transform: rotate(30deg);
+
+  @media (min-width: 768px) {
+    right: 0rem;
+    top: 16rem;
+  }
+}
+
+.flower-2{
+  background-image: url('../../assets/images/icons/WEBSITE_prenten_bloem2.svg');
+  left: 0rem;
+  top: 12rem;
+
+  @media (min-width: 576px) {
+    right: 0rem;
+    left: unset;
+    top: 32rem;
+  }
+
+  @media (min-width: 768px) {
+    right: 0rem;
+    top: 52rem;
+  }
+
+  @media (min-width: 992px) {
+    right: 0rem;
+    top: 24rem;
+  }
+}
+
+.flower-3{
+  background-image: url('../../assets/images/icons/WEBSITE_prenten_bloem3.svg');
+  left: 1rem;
+  top: 16rem;
+  transform: rotate(-90deg);
+
+  @media (min-width: 768px) {
+    right: 17rem;
+    left: unset;
+    top: 14rem;
+  }
+
+  @media (min-width: 992px) {
+    left: 1rem;
+    top: 13rem;
+  }
+
+  @media (min-width: 1200px) {
+    right: 7rem;
+    left: unset;
+    top: 28rem;
+  }
+}
+
+.poster1-width{
+  width: 65%;
+
+  @media (min-width: 1200px) {
+    width: 60%;
+  }
+
+  @media (min-width: 1440px) {
     width: 50%;
+  }
+
+  @media (min-width: 1920px) {
+    width: 40%;
   }
 }

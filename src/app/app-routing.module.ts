@@ -5,7 +5,12 @@ import { ContactComponent } from './contact/contact.component';
 import { AboutComponent } from './about/about.component';
 import { OfferComponent } from './offer/offer.component';
 import { PracticalComponent } from './practical/practical.component';
-import { TreatmentInfoComponent } from './treatment-info/treatment-info.component';
+import { StotterenComponent } from './treatments/stotteren/stotteren.component';
+import { PreverbaalComponent } from './treatments/preverbaal/preverbaal.component';
+import { SpraakComponent } from './treatments/spraak/spraak.component';
+import { TaalComponent } from './treatments/taal/taal.component';
+import { LerenComponent } from './treatments/leren/leren.component';
+import { ImpactComponent } from './treatments/impact/impact.component';
 
 const routes: Routes = [
   {
@@ -34,9 +39,35 @@ const routes: Routes = [
     title: 'Logopedie Segers ● Praktisch'
   },
   {
-    path: 'behandelingen/info/:id',
-    component: TreatmentInfoComponent,
-    title: 'Logopedie Segers ● Behandelingen'
+    path: 'behandelingen/info/stotteren',
+    component: StotterenComponent,
+    title: 'Logopedie Segers ● Stotteren'
+  },
+  {
+    path: 'behandelingen/info/preverbaal',
+    component: PreverbaalComponent,
+    title: 'Logopedie Segers ● Preverbaal'
+  },
+  {
+    path: 'behandelingen/info/spraak',
+    component: SpraakComponent,
+    title: 'Logopedie Segers ● Spraak'
+  },
+  {
+    path: 'behandelingen/info/taal',
+    component: TaalComponent,
+    title: 'Logopedie Segers ● Taal'
+  },
+  {
+    path: 'behandelingen/info/leren',
+    component: LerenComponent,
+    title: 'Logopedie Segers ● Leren'
+  }
+  ,
+  {
+    path: 'behandelingen/info/impact',
+    component: ImpactComponent,
+    title: 'Logopedie Segers ● IMPACT'
   }
 ];
 

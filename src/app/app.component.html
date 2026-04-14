@@ -22,6 +22,7 @@
       <span class="unselectable" [ngClass]="isRouteActive('/') ? 'text-primary' : 'clickable'" (click)="goTo('/')">Home</span>
       <span class="unselectable" [ngClass]="isRouteActive('/over-mij') ? 'text-primary' : 'clickable'" (click)="goTo('/over-mij')">Over mij</span>
       <span class="unselectable" [ngClass]="isRouteActive('/behandelingen') ? 'text-primary' : 'clickable'" (click)="goTo('/behandelingen')">Behandelingen</span>
+      <span class="unselectable" [ngClass]="isRouteActive('/hippotherapie') ? 'text-primary' : 'clickable'" (click)="goTo('/hippotherapie')">Hippotherapie</span>
       <span class="unselectable" [ngClass]="isRouteActive('/praktisch') ? 'text-primary' : 'clickable'" (click)="goTo('/praktisch')">Praktisch</span>
       <span class="unselectable" [ngClass]="isRouteActive('/contact') ? 'text-primary' : 'clickable'" (click)="goTo('/contact')">Contact</span>
     </div>
@@ -37,8 +38,9 @@
       <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/')"><i class="bi bi-house-fill"></i> Home</span>
       <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/over-mij')"><i class="bi bi-person-fill"></i> Over mij</span>
       <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/behandelingen')"><i class="bi bi-file-earmark-text-fill"></i> Behandelingen</span>
-      <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/praktisch')"><i class="bi bi-calendar-week-fill"></i> Praktisch</span>
-      <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/contact')"><i class="bi bi-telephone-fill"></i> Contact</span>
+      <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/hippotherapie')"><i class="bi bi-calendar-week-fill"></i> Hippotherapie</span>
+      <span class="p-3" data-bs-dismiss="offcanvas" (click)="goTo('/praktisch')"><i class="bi bi-calendar-week-fill"></i> Praktisch</span>
+      <span class="p-3 bg-info" data-bs-dismiss="offcanvas" (click)="goTo('/contact')"><i class="bi bi-telephone-fill"></i> Contact</span>
     </div>
   </div>
 </main>

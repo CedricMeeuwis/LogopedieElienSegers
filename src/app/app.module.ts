@@ -13,6 +13,12 @@ import { FooterComponent } from './footer/footer.component';
 import { BrandImageComponent } from './components/brand-image/brand-image.component';
 import { PracticalComponent } from './practical/practical.component';
 import { TreatmentInfoComponent } from './treatment-info/treatment-info.component';
+import { StotterenComponent } from './treatments/stotteren/stotteren.component';
+import { PreverbaalComponent } from './treatments/preverbaal/preverbaal.component';
+import { SpraakComponent } from './treatments/spraak/spraak.component';
+import { TaalComponent } from './treatments/taal/taal.component';
+import { LerenComponent } from './treatments/leren/leren.component';
+import { ImpactComponent } from './treatments/impact/impact.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +32,12 @@ import { TreatmentInfoComponent } from './treatment-info/treatment-info.componen
     BrandImageComponent,
     PracticalComponent,
     TreatmentInfoComponent,
+    StotterenComponent,
+    PreverbaalComponent,
+    SpraakComponent,
+    TaalComponent,
+    LerenComponent,
+    ImpactComponent,
   ],
   imports: [
     BrowserModule,

@@ -62,17 +62,7 @@ export class ContactComponent {
     this.contactForm.markAllAsTouched();
     this.myFormState = FormState.loading;
 
-    setTimeout(() => {
-      this.myFormState = FormState.success;
-      this.changeRef.detectChanges();
-      window.scrollTo({
-        left: 0,
-        top: 0,
-        behavior: 'instant'
-      });
-    }, 2000);
-
-    /*if(this.contactForm.valid)
+    if(this.contactForm.valid)
     {
       let datePipe = new DatePipe('en-BE');
       let dateStamp = datePipe.transform(Date.now(), 'd-MM-y H:mm');
@@ -117,7 +107,7 @@ export class ContactComponent {
           behavior: 'instant'
         });
       });
-    }*/
+    }
   }
 
   fieldHasError(fieldName: string)

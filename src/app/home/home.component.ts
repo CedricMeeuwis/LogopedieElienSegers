@@ -47,7 +47,7 @@ export class HomeComponent {
     {
       title: 'Stotteren',
       color: 'primary',
-      img: 'assets/images/IMG_1576_1080.jpg'
+      img: 'assets/images/IMG_1440_1080.jpg'
     },
     {
       title: 'Preverbale logopedie',
@@ -57,12 +57,12 @@ export class HomeComponent {
     {
       title: 'Spraakontwikkeling en afwijkende mondgewoonten',
       color: 'warning',
-      img: 'assets/images/IMG_1436_1080.jpg'
+      img: 'assets/images/IMG_1817_1080.jpg'
     },
     {
       title: 'Taalontwikkeling en taalstoornis',
       color: 'dark',
-      img: 'assets/images/IMG_1600_1080.jpg'
+      img: 'assets/images/IMG_1788_1080.jpg'
     },
     {
       title: 'Leerstoornissen en leerproblemen',
