@@ -36,7 +36,8 @@ export class ContactComponent {
     "Spraakontwikkeling en afwijkende mondgewoonten",
     "Taalontwikkeling en taalstoornis",
     "Leerstoornissen en leerproblemen",
-    "IMPACT-training"
+    "IMPACT-training",
+    "Hippotherapie"
   ];
 
   contactForm = new FormGroup({

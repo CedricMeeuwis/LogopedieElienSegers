@@ -2,9 +2,8 @@ import { Component, Input } from '@angular/core';
 
 export type TreatmentInfo = {
   title: string,
-  parts: {
-    content: string,
-    image: string,
+  images: {
+    imageLink: string,
     imageColor: string
   }[]
 }

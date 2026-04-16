@@ -19,6 +19,7 @@ import { SpraakComponent } from './treatments/spraak/spraak.component';
 import { TaalComponent } from './treatments/taal/taal.component';
 import { LerenComponent } from './treatments/leren/leren.component';
 import { ImpactComponent } from './treatments/impact/impact.component';
+import { HippoComponent } from './hippo/hippo.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { ImpactComponent } from './treatments/impact/impact.component';
     TaalComponent,
     LerenComponent,
     ImpactComponent,
+    HippoComponent,
   ],
   imports: [
     BrowserModule,
