@@ -21,6 +21,36 @@
   @media (min-width: 1400px) {
     width: 60%;
   }
+
+  &::before{
+    @media (min-width: 1200px) {
+      content: "";
+      width: 12rem;
+      height: 8rem;
+      background-image: url('../../assets/images/icons/WEBSITE_prenten_bloem3.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      top: 52rem;
+    }
+  }
+
+  &::after{
+    @media (min-width: 1200px) {
+      content: "";
+      width: 12rem;
+      height: 8rem;
+      background-image: url('../../assets/images/icons/WEBSITE_prenten_bloem2.svg');
+      background-size: contain;
+      background-repeat: no-repeat;
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      position: absolute;
+      right: 4rem;
+      top: 35rem;
+    }
+  }
 }
 
 .poster-fluid{
@@ -45,17 +75,33 @@
 .treatment-part{
   position: relative;
   overflow: hidden;
-  &::before
-  {
-    content: "";
-    position: absolute;
-    width: 40rem;
-    height: 32rem;
-    border-color: $primary;
-    border-width: 0.75rem;
-    border-style: dashed;
-    border-radius: 50%;
-    bottom: -18rem;
-    left: -20rem;
+  @media (min-width: 992px) {
+    &::before
+    {
+      content: "";
+      position: absolute;
+      width: 60rem;
+      height: 48rem;
+      border-color: $secondary;
+      border-width: 0.5rem;
+      border-style: dashed;
+      border-radius: 50%;
+      bottom: -24rem;
+      left: -30rem;
+    }
+
+    &::after
+    {
+      content: "";
+      position: absolute;
+      width: 45rem;
+      height: 36rem;
+      border-color: $secondary;
+      border-width: 0.5rem;
+      border-style: dashed;
+      border-radius: 50%;
+      top: -18rem;
+      right: -25rem;
+    }
   }
 }

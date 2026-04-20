@@ -17,7 +17,7 @@
             </span>
           </div>
           <div class="col-8 col-lg-6 col-xl-4 d-flex align-items-center mx-auto mt-4 mt-lg-0">
-            <brand-image imgSrc="assets/images/IMG_1552_1080.jpg" color="secondary"></brand-image>
+            <brand-image imgSrc="assets/images/IMG_1552_720.jpg" color="secondary"></brand-image>
           </div>
         </div>
         <span class="w-50 mx-auto text-secondary">
@@ -44,33 +44,33 @@
         <form (ngSubmit)="onSubmit()" [formGroup]="contactForm" *ngIf="myFormState == formState.init || myFormState == formState.loading">
           <div class="mb-3">
             <label for="firstname" class="form-label">Voornaam</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('firstname') }" id="firstname" formControlName="firstname">
+            <input maxlength="100" type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('firstname') }" id="firstname" formControlName="firstname">
             <label for="firstname" class="form-label text-danger" *ngIf="fieldHasError('firstname')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
             <label for="name" class="form-label">Naam</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('name') }" id="name" formControlName="name">
+            <input maxlength="100" type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('name') }" id="name" formControlName="name">
             <label for="name" class="form-label text-danger" *ngIf="fieldHasError('name')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
             <label for="street" class="form-label">Straat + nr</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('street') }" id="street" formControlName="street">
+            <input maxlength="100" type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('street') }" id="street" formControlName="street">
             <label for="street" class="form-label text-danger" *ngIf="fieldHasError('street')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
             <label for="postcode" class="form-label">Postcode + gemeente</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('postcode') }" id="postcode" formControlName="postcode">
+            <input maxlength="100" type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('postcode') }" id="postcode" formControlName="postcode">
             <label for="postcode" class="form-label text-danger" *ngIf="fieldHasError('postcode')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
             <label for="email" class="form-label">E-mail</label><span class="text-danger"> *</span>
-            <input type="email" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('email') }" id="email" formControlName="email">
+            <input maxlength="255" type="email" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('email') }" id="email" formControlName="email">
             <label for="email" class="form-label text-danger" *ngIf="fieldHasSpecificError('email', 'required')">Dit veld is verplicht</label>
             <label for="email" class="form-label text-danger" *ngIf="!fieldHasSpecificError('email', 'required') && fieldHasSpecificError('email', 'email')">Moet een geldige e-mail zijn</label>
           </div>
           <div class="mb-3">
             <label for="telephone" class="form-label">Tel. / GSM</label><span class="text-danger"> *</span>
-            <input type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('telephone') }" id="telephone" formControlName="telephone">
+            <input maxlength="25" type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('telephone') }" id="telephone" formControlName="telephone">
             <label for="telephone" class="form-label text-danger" *ngIf="fieldHasError('telephone')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
@@ -83,7 +83,8 @@
           </div>
           <div class="mb-3">
             <label for="extra" class="form-label">Vragen en/of opmerkingen</label><span class="text-danger"> *</span>
-            <textarea class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('extra') }" id="extra" formControlName="extra" rows="4"></textarea>
+            <textarea maxlength="1000" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('extra') }" id="extra" formControlName="extra" rows="4"></textarea>
+            <label for="extra" class="form-label float-end my-1">{{this.contactForm.get('extra')?.value?.length}} / 1000</label>
             <label for="extra" class="form-label text-danger" *ngIf="fieldHasError('extra')">Dit veld is verplicht</label>
           </div>
           <input type="submit" class="btn btn-secondary" value="Verzenden" *ngIf="myFormState != formState.loading">
@@ -139,7 +140,7 @@
     <div class="d-block d-md-none">
       <div class="row">
         <div *ngFor="let treatment of treatments; index as i" class="col-12 gy-3">
-          <i class="bi bi-circle-fill"></i><span class="fs-5 ps-2">{{treatment}}</span>
+          <i class="bi bi-dash"></i><span class="fs-5 ps-2">{{treatment}}</span>
         </div>
       </div>
     </div>

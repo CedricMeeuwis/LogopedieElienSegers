@@ -5,7 +5,7 @@
   <div class="row mx-auto welcome-intro gy-5 px-5">
     <div class="col-12 col-md-6 order-2 order-md-1">
       <h1 class="text-primary">Logopedie Elien Segers</h1>
-      <p>Ik ben logopediste, gespecialiseerd in <span class="text-secondary">stotteren</span>, <span class="text-secondary">preverbale logopedie</span> en <span class="text-secondary">taal- en spraakontwikkeling</span>. Vanuit een wetenschappelijk onderbouwde en doelgerichte aanpak begeleid ik kinderen, jongeren en hun omgeving, met oog voor hun talenten. Mijn bijzondere expertise ligt in het gedragsmatige aspect van stotteren en de invloed van ontwikkelingsstoornissen op sociale interactie, communicatie en de verdere taalontwikkeling.</p>
+      <p>Ik ben logopediste, gespecialiseerd in <span class="text-warning">stotteren</span>, <span class="text-warning">preverbale logopedie</span> en <span class="text-warning">taal- en spraakontwikkeling</span>. Vanuit een wetenschappelijk onderbouwde en doelgerichte aanpak begeleid ik kinderen, jongeren en hun omgeving, met oog voor hun talenten. Mijn bijzondere expertise ligt in het gedragsmatige aspect van stotteren en de invloed van ontwikkelingsstoornissen op sociale interactie, communicatie en de verdere taalontwikkeling.</p>
       <p>Samen creëren we een veilige omgeving waarin communicatie kan groeien.</p>
       <a href="over-mij" class="btn btn-primary">Lees meer</a>
     </div>
@@ -14,11 +14,11 @@
     </div>
   </div>
   <div class="text-center bg-info p-4 treatment-part">
-    <h1 class="mb-5">Behandelingen</h1>
+    <h1 class="mb-5 z-2 position-relative">Behandelingen</h1>
     <div class="row w-100 gy-4 my-5">
-      <div class="col-12 col-sm-6 col-md-4 clickable mt-auto" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + (i + 1))">
-        <h2 [ngClass]="'text-' + treatment.color">{{treatment.title}}</h2>
-        <div class="p-4">
+      <div class="col-12 col-sm-6 col-md-4 clickable mt-auto" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + treatment.link)">
+        <h2 class="z-1 position-relative bg-info" [ngClass]="'text-' + treatment.color">{{treatment.title}}</h2>
+        <div class="p-4 z-1 position-relative">
           <brand-image [imgSrc]="treatment.img" [color]="treatment.color"></brand-image>
         </div>
       </div>

@@ -7,6 +7,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './brand-image.component.scss',
 })
 export class BrandImageComponent {
-  @Input({required: true}) imgSrc!: string;
-  @Input({required: true}) color!: string;
+  @Input({required: true}) imgSrc!: string | undefined;
+  @Input({required: true}) color!: string | undefined;
 }

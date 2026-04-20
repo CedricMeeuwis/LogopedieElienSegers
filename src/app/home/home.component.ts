@@ -9,7 +9,8 @@ type Step = {
 type Treatment = {
   title: string,
   color: string,
-  img: string
+  img: string,
+  link: string
 }
 
 
@@ -47,32 +48,38 @@ export class HomeComponent {
     {
       title: 'Stotteren',
       color: 'primary',
-      img: 'assets/images/IMG_1440_1080.jpg'
+      img: 'assets/images/IMG_1440_1080.jpg',
+      link: 'stotteren'
     },
     {
       title: 'Preverbale logopedie',
       color: 'dark',
-      img: 'assets/images/IMG_1617_1080.jpg'
+      img: 'assets/images/IMG_1617_1080.jpg',
+      link: 'preverbaal'
     },
     {
       title: 'Spraakontwikkeling en afwijkende mondgewoonten',
       color: 'warning',
-      img: 'assets/images/IMG_1817_1080.jpg'
+      img: 'assets/images/IMG_1817_1080.jpg',
+      link: 'spraak'
     },
     {
       title: 'Taalontwikkeling en taalstoornis',
       color: 'dark',
-      img: 'assets/images/IMG_1788_1080.jpg'
+      img: 'assets/images/IMG_1778_1080.jpg',
+      link: 'taal'
     },
     {
       title: 'Leerstoornissen en leerproblemen',
       color: 'primary',
-      img: 'assets/images/IMG_1448_1080.jpg'
+      img: 'assets/images/IMG_1788_1080.jpg',
+      link: 'leren'
     },
     {
       title: 'IMPACT-training',
       color: 'warning',
-      img: 'assets/images/IMG_1470_1080.jpg'
+      img: 'assets/images/IMG_1470_1080.jpg',
+      link: 'impact'
     },
   ];
 

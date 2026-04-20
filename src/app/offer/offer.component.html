@@ -1,6 +1,6 @@
 <div class="content mx-auto py-5" id="behandelingen">
   <div class="d-flex flex-column align-items-center gap-5">
-    <div class="row align-items-center justify-content-center w-75" *ngFor="let offer of offers; even as e">
+    <div class="row align-items-center justify-content-center w-75" *ngFor="let offer of offers; even as e; last as l;">
       <div class="col-12 col-md-6 col-lg-5" [ngClass]="{'order-md-1' : e}">
         <brand-image [imgSrc]="offer.img" [color]="offer.color"></brand-image>
       </div>
@@ -13,6 +13,7 @@
         </ul>
         <a [href]="'behandelingen/info/' + offer.link" class="btn" [ngClass]="'btn-' + offer.color">Meer info</a>
       </div>
+      <div *ngIf="!l" class="order-5 swirl-width my-5" [ngClass]="'text-' + offer.color" [innerHtml]="getSwirlSvg(e)"></div>
     </div>
     <h1 class="mt-5 sig-font">
       Vragen Hebben Antwoorden

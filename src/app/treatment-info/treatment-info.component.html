@@ -1,4 +1,4 @@
-<div class="content p-5 responsive-width mx-auto">
+<div class="content p-5 responsive-width mx-auto position-relative">
   <div class="d-block d-md-none w-75 mx-auto mb-5">
     <brand-image [imgSrc]="treatmentInfo.images[0].imageLink" [color]="treatmentInfo.images[0].imageColor"></brand-image>
   </div>
@@ -10,12 +10,16 @@
     <div class="d-none d-md-block col-6 col-xl-5 col-xxl-4 mx-auto">
       <div class="d-flex flex-column h-100 justify-content-around">
         <div *ngFor="let image of treatmentInfo.images">
-          <brand-image [imgSrc]="image.imageLink" [color]="image.imageColor"></brand-image>
+          <brand-image *ngIf="image.imageLink != undefined" [imgSrc]="image.imageLink" [color]="image.imageColor"></brand-image>
+          <div *ngIf="image.svg != undefined" [ngClass]="'p-' + image.svgPadding + ' text-' + image.svgColor" [innerHtml]="image.svg">
+          </div>
         </div>
       </div>
     </div>
   </div>
   <div class="d-block d-md-none w-75 mx-auto mt-5" *ngIf="treatmentInfo.images.length > 1">
-    <brand-image [imgSrc]="treatmentInfo.images[1].imageLink" [color]="treatmentInfo.images[1].imageColor"></brand-image>
+    <brand-image *ngIf="treatmentInfo.images[1].imageLink != undefined" [imgSrc]="treatmentInfo.images[1].imageLink" [color]="treatmentInfo.images[1].imageColor"></brand-image>
+    <div *ngIf="treatmentInfo.images[1].svg != undefined" [ngClass]="'p-' + treatmentInfo.images[1].svgPadding + ' text-' + treatmentInfo.images[1].svgColor" [innerHtml]="treatmentInfo.images[1].svg">
+    </div>
   </div>
 </div>

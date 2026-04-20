@@ -15,7 +15,7 @@
       </div>
     </div>
   </div>
-  <h1 class="my-5 w-75 mx-auto">Tarieven</h1>
+  <h1 class="mt-5 w-75 mx-auto">Tarieven</h1>
   <table class="table text-primary w-75 mx-auto">
     <thead>
       <tr class="table-primary">
@@ -40,8 +40,8 @@
   <h2 class="text-center my-5">Foto's</h2>
   <div id="practicalCarousel" class="carousel practical-carousel slide mx-auto">
     <div class="carousel-indicators">
-    <button *ngFor="let image of practicalImages; index as i" type="button" [ngClass]="{'active' : i == 0}" data-bs-target="#practicalCarousel" attr.data-bs-slide-to="{{i}}" [aria-label]="'Slide ' + (i + 1)"></button>
-  </div>
+      <button *ngFor="let image of practicalImages; index as i" type="button" [ngClass]="{'active' : i == 0}" data-bs-target="#practicalCarousel" attr.data-bs-slide-to="{{i}}" [aria-label]="'Slide ' + (i + 1)"></button>
+    </div>
     <div class="carousel-inner h-100 w-auto">
       <div class="carousel-item h-100 w-100 text-center" *ngFor="let image of practicalImages; first as f" [ngClass]="{'active': f}">
         <img [src]="'assets/images/' + image" class="carousel-image">

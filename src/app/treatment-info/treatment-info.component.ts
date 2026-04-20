@@ -1,10 +1,14 @@
 import { Component, Input } from '@angular/core';
+import { SafeHtml } from '@angular/platform-browser';
 
 export type TreatmentInfo = {
   title: string,
   images: {
-    imageLink: string,
-    imageColor: string
+    imageLink?: string,
+    imageColor?: string
+    svg?: SafeHtml
+    svgPadding?: string,
+    svgColor?: string
   }[]
 }
 
