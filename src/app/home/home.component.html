@@ -2,10 +2,10 @@
   <div class="home-intro align-items-center d-flex">
     <!--<h2 class="text-dark text-shadow ms-5">Logopedie Elien Segers</h2>-->
   </div>
-  <div class="row mx-auto welcome-intro gy-5 px-5">
+  <div class="row mx-auto welcome-intro gy-5 px-3 px-md-5 mb-5">
     <div class="col-12 col-md-6 order-2 order-md-1">
       <h1 class="text-primary">Logopedie Elien Segers</h1>
-      <p>Ik ben logopediste, gespecialiseerd in <span class="text-warning">stotteren</span>, <span class="text-warning">preverbale logopedie</span> en <span class="text-warning">taal- en spraakontwikkeling</span>. Vanuit een wetenschappelijk onderbouwde en doelgerichte aanpak begeleid ik kinderen, jongeren en hun omgeving, met oog voor hun talenten. Mijn bijzondere expertise ligt in het gedragsmatige aspect van stotteren en de invloed van ontwikkelingsstoornissen op sociale interactie, communicatie en de verdere taalontwikkeling.</p>
+      <p>Ik ben logopediste, gespecialiseerd in <span class="text-warning-drk">stotteren</span>, <span class="text-warning-drk">preverbale logopedie</span> en <span class="text-warning-drk">taal- en spraakontwikkeling</span>. Vanuit een wetenschappelijk onderbouwde en doelgerichte aanpak begeleid ik kinderen, jongeren en hun omgeving, met oog voor hun talenten. Mijn bijzondere expertise ligt in het gedragsmatige aspect van stotteren en de invloed van ontwikkelingsstoornissen op sociale interactie, communicatie en de verdere taalontwikkeling.</p>
       <p>Samen creëren we een veilige omgeving waarin communicatie kan groeien.</p>
       <a href="over-mij" class="btn btn-primary">Lees meer</a>
     </div>
@@ -13,7 +13,20 @@
       <brand-image imgSrc="assets/images/IMG_1569_1080.jpg" color="primary"></brand-image>
     </div>
   </div>
-  <div class="text-center bg-info p-4 treatment-part">
+  <div class="row mx-auto welcome-intro gy-5 px-3 px-md-5">
+    <div class="col-12 col-md-6">
+      <brand-image imgSrc="assets/images/hippo-foto.jpg" color="dark"></brand-image>
+    </div>
+    <div class="col-12 col-md-6">
+      <h1 class="text-primary">Hippotherapie Elien Segers</h1>
+      <p>Hippotherapie is voor mij een natuurlijke combinatie van mijn werk als therapeut en mijn jarenlange passie voor paarden. In contact met het paard ontstaat er ruimte voor (mentale) rust, verbinding en ontwikkeling. Bovendien is de therapeutische waarde van paarden al langer gekend. Onderzoek toont aan dat Equine Assisted Therapy (EAT) niet alleen het mentaal welbevinden ondersteunt, maar ook helpt om stress en angst te verminderen, zelfvertrouwen te versterken en sociale interactie te bevorderen.</p>
+      <p>Ik begeleid kinderen, jongeren en volwassenen met uiteenlopende ontwikkelingsnoden, met bijzondere aandacht voor communicatie, mentaal welbevinden en emotieregulatie. Het paard helpt om spanning te verlagen, contact uit te lokken en vaardigheden op een ervaringsgerichte manier te versterken.</p>
+      <p>Samen creëren we een warme en veilige omgeving waarin elk kind op zijn eigen manier kan groeien.</p>
+      <a href="hippo" class="btn btn-dark">Lees meer</a>
+    </div>
+
+  </div>
+  <div class="text-center bg-info py-4 px-2 px-md-4 treatment-part">
     <h1 class="mb-5 z-2 position-relative">Behandelingen</h1>
     <div class="row w-100 gy-4 my-5">
       <div class="col-12 col-sm-6 col-md-4 clickable mt-auto" *ngFor="let treatment of treatments; index as i" (click)="navigateTo('behandelingen/info/' + treatment.link)">
@@ -24,7 +37,7 @@
       </div>
     </div>
   </div>
-  <div class="d-inline-flex flex-column align-items-center py-3 px-5 gap-4">
+  <div class="d-inline-flex flex-column align-items-center py-3 px-3 px-md-5 gap-4">
     <h2>Stappenplan</h2>
     <p class="sig-font fs-3 mb-4">Stap voor stap</p>
     <div class="d-flex flex-column flex-lg-row justify-content-between">

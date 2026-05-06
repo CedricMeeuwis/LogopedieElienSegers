@@ -8,5 +8,10 @@ import { Component, Input } from '@angular/core';
 })
 export class BrandImageComponent {
   @Input({required: true}) imgSrc!: string | undefined;
-  @Input({required: true}) color!: string | undefined;
+  _color!: string;
+  @Input({required: true}) set color(value: string | undefined)
+  {
+    this._color = value ?? "";
+    if(this._color == "warning-drk") this._color = "warning";
+  };
 }

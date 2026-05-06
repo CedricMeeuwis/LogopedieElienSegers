@@ -1,11 +1,11 @@
 <div class="content mx-auto py-5" id="behandelingen">
   <div class="d-flex flex-column align-items-center gap-5">
     <div class="row align-items-center justify-content-center w-75" *ngFor="let offer of offers; even as e; last as l;">
-      <div class="col-12 col-md-6 col-lg-5" [ngClass]="{'order-md-1' : e}">
+      <div class="col-12 col-md-6 col-lg-5 mb-5 mb-md-0" [ngClass]="{'order-md-1' : e}">
         <brand-image [imgSrc]="offer.img" [color]="offer.color"></brand-image>
       </div>
       <div class="col-12 col-md-6 col-lg-7">
-        <h3 [ngClass]="'text-' + offer.color">{{offer.title}}</h3>
+        <h3 [ngClass]="offer.color == 'warning' ? 'text-' + offer.color +  '-drk' : 'text-' + offer.color">{{offer.title}}</h3>
         <ul class="list-group list-group-flush my-3">
           <li class="list-group-item px-0" *ngFor="let question of offer.questions">
             <i class="bi bi-caret-right pe-2"></i>{{question}}
@@ -15,7 +15,7 @@
       </div>
       <div *ngIf="!l" class="order-5 swirl-width my-5" [ngClass]="'text-' + offer.color" [innerHtml]="getSwirlSvg(e)"></div>
     </div>
-    <h1 class="mt-5 sig-font">
+    <h1 class="mt-5 sig-font text-center">
       Vragen Hebben Antwoorden
     </h1>
     <div class="d-flex icons-width">

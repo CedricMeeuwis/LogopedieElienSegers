@@ -16,7 +16,7 @@ export class SpraakComponent {
     title: 'Spraak en afwijkende mondgewoonten',
     images: [
       {
-        imageLink: 'assets/images/IMG_1454_1080.jpg',
+        imageLink: 'assets/images/IMG_1800_1080.jpg',
         imageColor: 'dark'
       },
       {
@@ -63,7 +63,7 @@ export class SpraakComponent {
         svgColor: "primary"
       },
       {
-        imageLink: 'assets/images/IMG_1800_1080.jpg',
+        imageLink: 'assets/images/IMG_1454_1080.jpg',
         imageColor: 'secondary'
       },
     ]

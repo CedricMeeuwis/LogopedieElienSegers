@@ -1,43 +1,109 @@
-<div class="content p-5">
+<div class="content py-5 px-4 px-md-5">
   <div class="width-fluid mx-auto">
-    <h1 class="mb-5 text-center">Stappenplan</h1>
-    <div class="d-flex flex-column gap-5">
-      <div class="text-center" *ngFor="let step of steps; index as i; last as l; even as e">
-        <div class="d-flex mb-5" [ngClass]="{'flex-row-reverse' : !e}">
-          <div class="step-ball" [ngClass]="{'step-ball-left': e}">
-            <div class="d-flex align-items-center justify-content-center p-3">
-              <h4 class="text-light">Stap {{i+1}}<br/>{{step.title}}</h4>
-            </div>
-          </div>
-          <span class="d-flex align-items-center text-start bg-info px-3" [ngClass]="e ? 'rounded-end-4' : 'rounded-start-4'">{{step.text}}</span>
-        </div>
-        <i class="bi bi-caret-down-fill text-primary fs-1" *ngIf="!l"></i>
+    <h2 class="mb-5">Stappenplan</h2>
+    <div class="d-flex flex-column flex-sm-row">
+      <div class="d-flex flex-column gap-2 w-100 order-1">
+        <p class="m-0" *ngFor="let step of steps; index as i">
+          <span class="text-warning-drk">{{i+1}}. </span>
+          <span class="fw-bold">{{step.title}}:</span>
+          {{step.text}}
+        </p>
+      </div>
+      <div class="mx-auto col-10 col-sm-7 col-md-6 col-lg-5 col-xl-4 order-0 order-sm-2 mb-5 mb-sm-0">
+        <brand-image imgSrc="assets/images/laptop.jpg" color="warning"></brand-image>
       </div>
     </div>
   </div>
-  <h1 class="mt-5 w-75 mx-auto">Tarieven</h1>
-  <table class="table text-primary w-75 mx-auto">
-    <thead>
-      <tr class="table-primary">
-        <th colspan="2" class="text-dark">Onderzoekfase</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Intakegesprek</td>
-        <td>€60 (+/- 45min)</td>
-      </tr>
-      <tr>
-        <td>Onderzoek</td>
-        <td>€45 per begonnen half uur</td>
-      </tr>
-      <tr>
-        <td>Bespreken resultaten en behandelplan</td>
-        <td>€60 (+/- 45min)</td>
-      </tr>
-    </tbody>
-  </table>
-  <h2 class="text-center my-5">Foto's</h2>
+  <div class="tarrifs mx-auto d-flex flex-column gap-3">
+    <h1 class="mt-5">Tarieven</h1>
+    <table class="table">
+      <thead>
+        <tr class="table-primary">
+          <th colspan="2" class="text-dark">Onderzoeksfase (voor de start van de therapie)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="w-50">Intakegesprek</td>
+          <td class="w-50">€68,07 (+- 45 min)</td>
+        </tr>
+        <tr>
+          <td>Onderzoek + verslag</td>
+          <td>€45,38 per begonnen half uur</td>
+        </tr>
+        <tr>
+          <td>Bespreking resultaten en behandelplan</td>
+          <td>€45,38 (+- 30 min)</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      Voor cliënten <span class="fw-bold">met een voorkeursregeling</span> gelden andere tarieven. Indien u recht hebt op een voorkeursregeling, bent u zelf verantwoordelijk om uw logopedist hiervan op de hoogte te brengen. De logopedist zal u vervolgens informeren over de aangepaste tarieven. Na elk onderdeel van de onderzoeksfase, dient er meteen betaald te worden via payconiq of de betaalapp van uw bank.
+    </p>
+    <table class="table">
+      <thead>
+        <tr class="table-primary">
+          <th colspan="2" class="text-dark">Tarieven therapie (logopedie)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-secondary">
+          <td class="text-dark w-50">Honorarium</td>
+          <td class="text-dark w-50">Remgeld (eigen bijdrage)</td>
+        </tr>
+        <tr class="table-secondary">
+          <td class="text-dark" colspan="2">Cliënten <span class="fw-bold">zonder</span> voorkeursregeling</td>
+        </tr>
+        <tr>
+          <td>€41,5 per half uur</td>
+          <td>€16,84 per half uur</td>
+        </tr>
+        <tr>
+          <td>€83 per uur</td>
+          <td>€33,46 per uur</td>
+        </tr>
+        <tr class="table-secondary">
+          <td class="text-dark" colspan="2">Cliënten <span class="fw-bold">met</span> voorkeursregeling</td>
+        </tr>
+        <tr>
+          <td>€38,37 per half uur</td>
+          <td>€2 per half uur</td>
+        </tr>
+        <tr>
+          <td>€76,74 per uur</td>
+          <td>€4,5 per uur</td>
+        </tr>
+      </tbody>
+    </table>
+    <table class="table">
+      <thead>
+        <tr class="table-primary">
+          <th colspan="2" class="text-dark">Tarieven hippotherapie</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="w-50">Intakegesprek en kennismaking</td>
+          <td class="w-50">€50</td>
+        </tr>
+        <tr>
+          <td>Individuele pony- of paardrijlessen</td>
+          <td>
+            <p class="mb-1">€35 per half uur</p>
+            <p class="mb-1">€65 per uur</p>
+          </td>
+        </tr>
+        <tr>
+          <td>Individuele hippotherapiesessie</td>
+          <td>
+            <p class="mb-1">€45 per half uur</p>
+            <p class="mb-1">€80 per uur</p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <h1 class="text-center my-5">Foto's</h1>
   <div id="practicalCarousel" class="carousel practical-carousel slide mx-auto">
     <div class="carousel-indicators">
       <button *ngFor="let image of practicalImages; index as i" type="button" [ngClass]="{'active' : i == 0}" data-bs-target="#practicalCarousel" attr.data-bs-slide-to="{{i}}" [aria-label]="'Slide ' + (i + 1)"></button>

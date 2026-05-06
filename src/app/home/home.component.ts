@@ -59,7 +59,7 @@ export class HomeComponent {
     },
     {
       title: 'Spraakontwikkeling en afwijkende mondgewoonten',
-      color: 'warning',
+      color: 'warning-drk',
       img: 'assets/images/IMG_1817_1080.jpg',
       link: 'spraak'
     },
@@ -77,7 +77,7 @@ export class HomeComponent {
     },
     {
       title: 'IMPACT-training',
-      color: 'warning',
+      color: 'warning-drk',
       img: 'assets/images/IMG_1470_1080.jpg',
       link: 'impact'
     },

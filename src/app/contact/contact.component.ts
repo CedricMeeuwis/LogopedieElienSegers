@@ -12,6 +12,7 @@ interface formPayload {
   telephone: string | undefined | null,
   treatment: string | undefined | null,
   extra: string | undefined | null,
+  _gotcha: string | undefined | null,
   date: string | undefined | null
 }
 
@@ -49,6 +50,7 @@ export class ContactComponent {
     telephone: new FormControl('', Validators.required),
     treatment: new FormControl('', Validators.required),
     extra: new FormControl('', Validators.required),
+    _gotcha: new FormControl('')
   }, {
     updateOn: 'blur'
   });
@@ -61,8 +63,6 @@ export class ContactComponent {
   onSubmit()
   {
     this.contactForm.markAllAsTouched();
-    this.myFormState = FormState.loading;
-
     if(this.contactForm.valid)
     {
       let datePipe = new DatePipe('en-BE');
@@ -77,6 +77,7 @@ export class ContactComponent {
           telephone: this.contactForm.get('telephone')?.value,
           treatment: this.contactForm.get('treatment')?.value,
           extra: this.contactForm.get('extra')?.value,
+          _gotcha: this.contactForm.get('_gotcha')?.value,
           date: dateStamp
       }
 
@@ -91,23 +92,31 @@ export class ContactComponent {
           }).then(
             () => {
               this.myFormState = FormState.success;
+              this.changeRef.markForCheck();
             },
-          (err2) => {
-            console.log((err2 as EmailJSResponseStatus).text);
-            this.myFormState = FormState.secondError;
-          });
+            (err2) => {
+              console.log((err2 as EmailJSResponseStatus).text);
+              this.myFormState = FormState.secondError;
+              this.changeRef.markForCheck();
+            }).finally(() => {
+              window.scrollTo({
+                left: 0,
+                top: 0,
+                behavior: 'instant'
+              });
+            });
         },
         (error) => {
           console.log((error as EmailJSResponseStatus).text);
           this.myFormState = FormState.firstError;
+          this.changeRef.markForCheck();
+          window.scrollTo({
+            left: 0,
+            top: 0,
+            behavior: 'instant'
+          });
         }
-      ).finally(() => {
-        window.scrollTo({
-          left: 0,
-          top: 0,
-          behavior: 'instant'
-        });
-      });
+      )
     }
   }
 

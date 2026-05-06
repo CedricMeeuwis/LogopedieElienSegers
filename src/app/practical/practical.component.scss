@@ -1,4 +1,5 @@
 @import '../../variables';
+
 .step-ball{
   position: relative;
   div{
@@ -11,6 +12,7 @@
     border-radius: 50%;
   }
 }
+
 .step-ball::before{
   content: "";
   position: absolute;
@@ -28,10 +30,10 @@
 .width-fluid{
   width: 100%;
   @media (min-width: 768px) {
-    width: 75%;
+    width: 80%;
   }
   @media (min-width: 1400px) {
-    width: 50%;
+    width: 60%;
   }
 }
 
@@ -56,7 +58,15 @@
   }
   background-color: $dark;
 }
+
 .carousel-image{
   height: 100%;
   width: auto;
+}
+
+.tarrifs{
+  width: 100%;
+  @media (min-width: 1200px) {
+    width: 75%;
+  }
 }

@@ -7,11 +7,11 @@
       <h2 class="text-primary">{{treatmentInfo.title}}</h2>
       <ng-content/>
     </div>
-    <div class="d-none d-md-block col-6 col-xl-5 col-xxl-4 mx-auto">
+    <div class="d-none d-md-block col-6 col-xl-5 mx-auto">
       <div class="d-flex flex-column h-100 justify-content-around">
         <div *ngFor="let image of treatmentInfo.images">
           <brand-image *ngIf="image.imageLink != undefined" [imgSrc]="image.imageLink" [color]="image.imageColor"></brand-image>
-          <div *ngIf="image.svg != undefined" [ngClass]="'p-' + image.svgPadding + ' text-' + image.svgColor" [innerHtml]="image.svg">
+          <div class="w-75 mx-auto" *ngIf="image.svg != undefined" [ngClass]="'p-' + image.svgPadding + ' text-' + image.svgColor" [innerHtml]="image.svg">
           </div>
         </div>
       </div>
