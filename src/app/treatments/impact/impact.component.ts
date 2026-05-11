@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TreatmentInfo } from '../../treatment-info/treatment-info.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-impact',
@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class ImpactComponent {
   myTreatment: TreatmentInfo;
 
-  constructor(private sanitizer: DomSanitizer){
+  constructor(private sanitizer: DomSanitizer, private meta: Meta){
     this.myTreatment = {
       title: 'ImPACT-training en JASPER',
       images: [
@@ -30,5 +30,7 @@ export class ImpactComponent {
       ]
     }
 
+    this.meta.updateTag({ name: 'keywords', content: 'Logopedie, Elien, Segers, Arendonk, IMPACT' }, 'name=keywords');
+    this.meta.updateTag({ name: 'description', content: 'ImPACT is een wetenschappelijk onderbouwd programma waarin ouders leren hoe ze de sociaal-communicatieve vaardigheden van hun kind in het dagelijkse leven kunnen stimuleren.' }, 'name=description');
   }
 }

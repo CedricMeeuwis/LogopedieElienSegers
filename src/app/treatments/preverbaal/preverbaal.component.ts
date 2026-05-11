@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TreatmentInfo } from '../../treatment-info/treatment-info.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-preverbaal',
@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class PreverbaalComponent {
   myTreatment!: TreatmentInfo
 
-  constructor(private sanitizer: DomSanitizer)
+  constructor(private sanitizer: DomSanitizer, private meta: Meta)
   {
     this.myTreatment = {
       title: 'Preverbale logopedie',
@@ -38,5 +38,8 @@ export class PreverbaalComponent {
         }
       ]
     }
+
+    this.meta.updateTag({ name: 'keywords', content: 'Logopedie, Elien, Segers, Arendonk, Preverbale' }, 'name=keywords');
+    this.meta.updateTag({ name: 'description', content: 'Prelogopedie is een specifieke tak binnen de logopedie die jonge kinderen behandelt met voedings- of mondmotorische problemen, maar ook met problemen zoals een vertraagde taal- en spraakontwikkeling.' }, 'name=description');
   }
 }

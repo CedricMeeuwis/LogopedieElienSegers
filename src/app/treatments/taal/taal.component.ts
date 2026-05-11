@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TreatmentInfo } from '../../treatment-info/treatment-info.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-taal',
@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class TaalComponent {
   myTreatment!: TreatmentInfo;
 
-  constructor(private sanitizer: DomSanitizer){
+  constructor(private sanitizer: DomSanitizer, private meta: Meta){
     this.myTreatment = {
       title: 'Vertraagde taalontwikkeling en taalstoornis',
       images: [
@@ -32,5 +32,8 @@ export class TaalComponent {
         }
       ]
     }
+
+    this.meta.updateTag({ name: 'keywords', content: 'Logopedie, Elien, Segers, Arendonk, Taalontwikkeling, Taalstoornis' }, 'name=keywords');
+    this.meta.updateTag({ name: 'description', content: 'Taal ontwikkelt zich bij elk kind op een eigen tempo. Soms is er sprake van een vertraagde taalontwikkeling, waarbij de taal later op gang komt maar verder wel dezelfde ontwikkelingslijn volgt.' }, 'name=description');
   }
 }

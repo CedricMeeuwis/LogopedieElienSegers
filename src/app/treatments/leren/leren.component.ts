@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TreatmentInfo } from '../../treatment-info/treatment-info.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-leren',
@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class LerenComponent {
   myTreatment!: TreatmentInfo;
 
-  constructor(private sanitizer: DomSanitizer){
+  constructor(private sanitizer: DomSanitizer, private meta: Meta){
     this.myTreatment = {
       title: 'Leerproblemen en -stoornissen',
       images: [
@@ -30,5 +30,8 @@ export class LerenComponent {
         }
       ]
     }
+
+    this.meta.updateTag({ name: 'keywords', content: 'Logopedie, Elien, Segers, Arendonk, Leerproblemen, Leerstoornissen' }, 'name=keywords');
+    this.meta.updateTag({ name: 'description', content: 'Ik begeleid zowel kinderen met lees- en spellingproblemen als met rekenproblemen. Dankzij mijn achtergrond als leerkracht heb ik ook een sterke voeling met schoolse vaardigheden en de verwachtingen binnen de klaspraktijk.' }, 'name=description');
   }
 }

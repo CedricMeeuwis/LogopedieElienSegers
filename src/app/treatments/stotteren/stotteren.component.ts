@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TreatmentInfo } from '../../treatment-info/treatment-info.component';
-import { DomSanitizer } from '@angular/platform-browser';
+import { DomSanitizer, Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-stotteren',
@@ -11,7 +11,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class StotterenComponent {
   myTreatment!: TreatmentInfo;
 
-  constructor(private sanitizer: DomSanitizer)
+  constructor(private sanitizer: DomSanitizer, private meta: Meta)
   {
     this.myTreatment = {
       title: 'Stotteren',
@@ -36,5 +36,8 @@ export class StotterenComponent {
         },
       ]
     }
+
+    this.meta.updateTag({ name: 'keywords', content: 'Logopedie, Elien, Segers, Arendonk, Stotteren' }, 'name=keywords');
+    this.meta.updateTag({ name: 'description', content: 'Stotteren is meer dan onvloeiend spreken. Het raakt aan emoties, gedachten en hoe iemand zichzelf ervaart in communicatie. Het kan een grote impact hebben op het dagelijks functioneren en vraagt een individuele en veelzijdige aanpak op maat.' }, 'name=description');
   }
 }
