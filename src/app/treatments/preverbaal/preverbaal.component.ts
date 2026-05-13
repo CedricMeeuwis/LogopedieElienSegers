@@ -17,7 +17,7 @@ export class PreverbaalComponent {
       title: 'Preverbale logopedie',
       images: [
         {
-          imageLink: 'assets/images/IMG_0000_1080.jpg',
+          imageLink: 'assets/images/IMG_0000_720.jpg',
           imageColor: 'warning'
         },
         {

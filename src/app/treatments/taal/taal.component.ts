@@ -16,7 +16,7 @@ export class TaalComponent {
       title: 'Vertraagde taalontwikkeling en taalstoornis',
       images: [
         {
-          imageLink: 'assets/images/IMG_1538_1080.jpg',
+          imageLink: 'assets/images/IMG_1538_720.jpg',
           imageColor: 'warning'
         },
         {

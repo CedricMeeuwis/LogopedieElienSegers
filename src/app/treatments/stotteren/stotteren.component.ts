@@ -17,7 +17,7 @@ export class StotterenComponent {
       title: 'Stotteren',
       images: [
         {
-          imageLink: 'assets/images/IMG_1587_1080.jpg',
+          imageLink: 'assets/images/IMG_1587_720.jpg',
           imageColor: 'primary'
         },
         {
@@ -31,7 +31,7 @@ export class StotterenComponent {
           svgPadding: "5"
         },
         {
-          imageLink: 'assets/images/IMG_1806_1080.jpg',
+          imageLink: 'assets/images/IMG_1806_720.jpg',
           imageColor: 'dark'
         },
       ]

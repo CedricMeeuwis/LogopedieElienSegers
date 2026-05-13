@@ -16,7 +16,7 @@ export class LerenComponent {
       title: 'Leerproblemen en -stoornissen',
       images: [
         {
-          imageLink: 'assets/images/IMG_1448_1080.jpg',
+          imageLink: 'assets/images/IMG_1448_720.jpg',
           imageColor: 'secondary'
         },
         {

@@ -16,7 +16,7 @@ export class ImpactComponent {
       title: 'ImPACT-training en JASPER',
       images: [
         {
-          imageLink: 'assets/images/IMG_1470_1080.jpg',
+          imageLink: 'assets/images/IMG_1470_720.jpg',
           imageColor: 'primary'
         },
         {
