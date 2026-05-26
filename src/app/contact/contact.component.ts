@@ -1,11 +1,12 @@
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormControl, FormGroup, ValidationErrors, Validators } from '@angular/forms';
 import { DatePipe } from '@angular/common';
 import emailjs, {type EmailJSResponseStatus } from '@emailjs/browser';
 
 interface formPayload {
   firstname: string | undefined | null,
   name: string | undefined | null,
+  birthdate: string | undefined | null,
   street: string | undefined | null,
   postcode: string | undefined | null,
   email: string | undefined | null,
@@ -22,6 +23,17 @@ enum FormState {
   success,
   firstError,
   secondError
+}
+
+export class DateValidator
+{
+  static ValidDate(control: FormControl): ValidationErrors | null {
+    let today : Date = new Date();
+    let dateVal = new Date(control.value);
+
+    if (!Number.isNaN(dateVal.valueOf()) && dateVal > today) return { "ValidDate": true };
+    return null;
+  }
 }
 
 @Component({
@@ -44,12 +56,13 @@ export class ContactComponent {
   contactForm = new FormGroup({
     firstname: new FormControl('', Validators.required),
     name: new FormControl('', Validators.required),
+    birthdate: new FormControl('', [Validators.required, DateValidator.ValidDate]),
     street: new FormControl('', Validators.required),
     postcode: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     telephone: new FormControl('', Validators.required),
     treatment: new FormControl('', Validators.required),
-    extra: new FormControl('', Validators.required),
+    extra: new FormControl(''),
     _gotcha: new FormControl('')
   }, {
     updateOn: 'blur'
@@ -71,6 +84,7 @@ export class ContactComponent {
       let payload: formPayload = {
           firstname: this.contactForm.get('firstname')?.value,
           name: this.contactForm.get('name')?.value,
+          birthdate: this.contactForm.get('birthdate')?.value,
           street: this.contactForm.get('street')?.value,
           postcode: this.contactForm.get('postcode')?.value,
           email: this.contactForm.get('email')?.value,

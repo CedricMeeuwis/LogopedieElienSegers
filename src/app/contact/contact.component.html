@@ -54,6 +54,12 @@
             <label for="name" class="form-label text-danger" *ngIf="fieldHasError('name')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
+            <label for="birthdate" class="form-label">Geboortedatum</label><span class="text-danger"> *</span>
+            <input type="date" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('birthdate') }" id="birthdate" formControlName="birthdate">
+            <label for="birthdate" class="form-label text-danger" *ngIf="fieldHasSpecificError('birthdate', 'required')">Dit veld is verplicht</label>
+            <label for="birthdate" class="form-label text-danger" *ngIf="!fieldHasSpecificError('birthdate', 'required') && fieldHasSpecificError('birthdate', 'ValidDate')">Moet een geldige datum zijn in het verleden</label>
+          </div>
+          <div class="mb-3">
             <label for="street" class="form-label">Straat + nr</label><span class="text-danger"> *</span>
             <input maxlength="100" type="text" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('street') }" id="street" formControlName="street">
             <label for="street" class="form-label text-danger" *ngIf="fieldHasError('street')">Dit veld is verplicht</label>
@@ -83,10 +89,9 @@
             <label for="treatment" class="form-label text-danger" *ngIf="fieldHasError('treatment')">Dit veld is verplicht</label>
           </div>
           <div class="mb-3">
-            <label for="extra" class="form-label">Vragen en/of opmerkingen</label><span class="text-danger"> *</span>
+            <label for="extra" class="form-label">Vragen en/of opmerkingen</label>&nbsp;<i class="bi bi-question-circle text-warning-drk fs-5" data-toggle="tooltip" data-placement="top" title="Wat zijn de belangrijkste vragen en/of zorgen die u heeft i.v.m. de zorgvrager's problemen?"></i>
             <textarea maxlength="1000" class="form-control" [ngClass]="{ 'border-danger border-2' : fieldHasError('extra') }" id="extra" formControlName="extra" rows="4"></textarea>
             <label for="extra" class="form-label float-end my-1">{{this.contactForm.get('extra')?.value?.length}} / 1000</label>
-            <label for="extra" class="form-label text-danger" *ngIf="fieldHasError('extra')">Dit veld is verplicht</label>
           </div>
           <input type="submit" class="btn btn-secondary" value="Verzenden" *ngIf="myFormState != formState.loading">
           <div class="spinner-border" role="status" *ngIf="myFormState == formState.loading">
