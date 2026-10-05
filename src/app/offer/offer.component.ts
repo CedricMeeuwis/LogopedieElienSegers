@@ -29,7 +29,7 @@ export class OfferComponent {
         'Merk je dat spreken soms gepaard gaat met spanning, frustratie of sterke emoties?',
         'Heb je het gevoel dat je kind minder spontaan praat dan voorheen?'
       ],
-      color: 'primary',
+      color: 'oker',
       link: 'stotteren'
     },
     {
@@ -42,7 +42,7 @@ export class OfferComponent {
         'Weigert je peuter te eten of loopt de overgang naar vaste voeding moeizaam?',
         'Eet je peuter of kleuter zeer selectief of weinig gevarieerd?'
       ],
-      color: 'warning',
+      color: 'hemelblauw',
       link: 'preverbaal'
     },
     {
@@ -59,7 +59,7 @@ export class OfferComponent {
         'Blijven mondgewoonten zoals duimen of het gebruik van een fopspeen hardnekkig aanwezig?',
         'Of heb je het gevoel dat eten, drinken of spreken niet helemaal vlot verloopt?'
       ],
-      color: 'dark',
+      color: 'kobalt',
       link: 'spraak'
     },
     {
@@ -71,7 +71,7 @@ export class OfferComponent {
         'Reageert je kind soms ongepast in bepaalde sociale interacties?',
         'Heeft je kind een beperkte woordenschat of woordvindingsproblemen?'
       ],
-      color: 'warning',
+      color: 'kobalt',
       link: 'taal'
     },
     {
@@ -83,7 +83,7 @@ export class OfferComponent {
         'Kost huiswerk veel energie?',
         'Of merk je dat je kind hard werkt, maar toch niet mee lijkt te kunnen?'
       ],
-      color: 'secondary',
+      color: 'perzik',
       link: 'leren'
     },
     {
@@ -95,7 +95,7 @@ export class OfferComponent {
         'Merk je dat je kind weinig initiatief neemt om te communiceren of moeilijk tot interactie komt?',
         'Loopt de taalontwikkeling niet vanzelfsprekend en wil je deze uitlokken op een speelse manier met aandacht voor de sociaal-communicatieve vaardigheden?'
       ],
-      color: 'primary',
+      color: 'teal',
       link: 'impact'
     },
   ];

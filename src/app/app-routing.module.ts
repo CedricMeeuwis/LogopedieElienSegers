@@ -11,7 +11,6 @@ import { SpraakComponent } from './treatments/spraak/spraak.component';
 import { TaalComponent } from './treatments/taal/taal.component';
 import { LerenComponent } from './treatments/leren/leren.component';
 import { ImpactComponent } from './treatments/impact/impact.component';
-import { HippoComponent } from './hippo/hippo.component';
 
 const routes: Routes = [
   {
@@ -69,11 +68,11 @@ const routes: Routes = [
     component: ImpactComponent,
     title: 'Logopedie Segers ● IMPACT'
   },
-  {
-    path: 'hippo',
-    component: HippoComponent,
-    title: 'Logopedie Segers ● Hippotherapie'
-  }
+  /*{
+    path: 'tips',
+    component: TipsComponent,
+    title: 'Logopedie Segers ● Extra tips'
+  }*/
 ];
 
 @NgModule({

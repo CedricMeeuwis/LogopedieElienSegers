@@ -47,37 +47,37 @@ export class HomeComponent {
   treatments: Treatment[] = [
     {
       title: 'Stotteren',
-      color: 'primary',
+      color: 'oker',
       img: 'assets/images/IMG_1440_1080.jpg',
       link: 'stotteren'
     },
     {
       title: 'Preverbale logopedie',
-      color: 'dark',
+      color: 'hemelblauw',
       img: 'assets/images/IMG_1617_1080.jpg',
       link: 'preverbaal'
     },
     {
       title: 'Spraakontwikkeling en afwijkende mondgewoonten',
-      color: 'warning-drk',
+      color: 'kobalt',
       img: 'assets/images/IMG_1817_1080.jpg',
       link: 'spraak'
     },
     {
       title: 'Taalontwikkeling en taalstoornis',
-      color: 'dark',
+      color: 'kobalt',
       img: 'assets/images/IMG_1778_1080.jpg',
       link: 'taal'
     },
     {
       title: 'Leerstoornissen en leerproblemen',
-      color: 'primary',
+      color: 'perzik',
       img: 'assets/images/IMG_1788_1080.jpg',
       link: 'leren'
     },
     {
       title: 'IMPACT-training',
-      color: 'warning-drk',
+      color: 'teal',
       img: 'assets/images/IMG_1470_1080.jpg',
       link: 'impact'
     },
